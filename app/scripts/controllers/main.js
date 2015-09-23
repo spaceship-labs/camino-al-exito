@@ -88,6 +88,9 @@ angular.module('caminoAlExitoApp')
         $scope.saving = false;
         $scope.saved = !e ? true : false;
         $scope.$apply();
+        if(!e){
+          toggleSchoolMTE($scope.story.cct);
+        }
       });
     };
 
@@ -95,6 +98,23 @@ angular.module('caminoAlExitoApp')
       $location.hash('registro');
       $anchorScroll();
     };
+
+    function toggleSchoolMTE(cct, email){
+      $http({
+        method: 'GET',
+        url: 'http://mte.spaceshiplabs.com/api/suscribeEducacion',
+        params: {
+          cct: cct,
+        }
+      }).then(function(res) {
+        if(res && res.data && res.data.cct){
+          console.log("toggle cct", res.data.cct);
+        }else{
+          console.log("No found cct.", cct, "email", email);
+        }
+      });
+    }
+    //toggleSchoolMTE("17DZS0003Z");
 
     //update school name
     //no founds name:
@@ -148,5 +168,25 @@ angular.module('caminoAlExitoApp')
       console.log('err', err.code);
     });
     */
+    //intenta acctualizar todos los que pueda encontrar.
+    window.actualiceFromFirebaseToMTE = function(){
+      firebaseEntries.limitToLast(100).on('value', function(snapshot){
+        var snaps = snapshot.val(),
+        escuelas = [];
+        Object.keys(snaps).forEach(function(esc){
+          if(snaps[esc].cct){
+            snaps[esc].id = esc;
+            escuelas.push(snaps[esc]);
+          }
+        });
+        escuelas.forEach(function(sc){
+          toggleSchoolMTE(sc.cct, sc.email);
+        });
+
+      }, function(err){
+        console.log('err', err.code);
+      });
+    };
+
 
   });
