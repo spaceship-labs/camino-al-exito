@@ -68,7 +68,7 @@ angular.module('caminoAlExitoApp')
     };
 
     $scope.check = function(){
-      if($scope.story.email && $scope.story.email.indexOf('.') != -1 && $scope.story.cct){
+      if($scope.story.email && $scope.story.email.indexOf('.') !== -1 && $scope.story.cct){
         //$scope.story = { email: $scope.story.email };
         checkAndRevise($scope.story.email, $scope.story.cct);
       }
@@ -76,10 +76,10 @@ angular.module('caminoAlExitoApp')
 
 
     function checkAndRevise(email, cct){
-      var exists = $firebaseArray(firebaseEntries.orderByChild("email").equalTo(email))
+      var exists = $firebaseArray(firebaseEntries.orderByChild("email").equalTo(email));
       exists.$loaded(function(data){
         data.some(function(story){
-          if(story.cct == cct){
+          if(story.cct === cct){
             $scope.story = exists.$getRecord(story.$id);
             console.log(story.$id);
             $scope.save = function(selectedSchool){
@@ -114,7 +114,7 @@ angular.module('caminoAlExitoApp')
         alertNoFile();
         return;
       }*/
-      $scope.story.school = selectedSchool && selectedSchool.nombre || $scope.story.school;;
+      $scope.story.school = selectedSchool && selectedSchool.nombre || $scope.story.school;
       $scope.saving = true;
       firebaseEntries.push().set($scope.story, function(e) {
         $scope.saving = false;
