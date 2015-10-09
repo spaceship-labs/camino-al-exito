@@ -67,6 +67,38 @@ angular.module('caminoAlExitoApp')
       });
     };
 
+    $scope.check = function(){
+      if($scope.story.email && $scope.story.email.indexOf('.') != -1 && $scope.story.cct){
+        //$scope.story = { email: $scope.story.email };
+        checkAndRevise($scope.story.email, $scope.story.cct);
+      }
+    };
+
+
+    function checkAndRevise(email, cct){
+      var exists = $firebaseArray(firebaseEntries.orderByChild("email").equalTo(email))
+      exists.$loaded(function(data){
+        data.some(function(story){
+          if(story.cct == cct){
+            $scope.story = exists.$getRecord(story.$id);
+            console.log(story.$id);
+            $scope.save = function(selectedSchool){
+              $scope.saving = true;
+              $scope.story.school = selectedSchool && selectedSchool.nombre || $scope.story.school;
+              exists.$save($scope.story).then(function(){
+                $scope.saving = false;
+                $scope.saved = true;
+              });
+            };
+            return true;
+          }
+        });
+
+      });
+    }
+
+    //checkAndRevise('email', '15EES1075O');
+
     /*var alertNoFile = function(){
       $mdDialog.show(
         $mdDialog.alert()
@@ -82,7 +114,7 @@ angular.module('caminoAlExitoApp')
         alertNoFile();
         return;
       }*/
-      $scope.story.school = selectedSchool.nombre;
+      $scope.story.school = selectedSchool && selectedSchool.nombre || $scope.story.school;;
       $scope.saving = true;
       firebaseEntries.push().set($scope.story, function(e) {
         $scope.saving = false;

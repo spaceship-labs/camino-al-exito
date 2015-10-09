@@ -216,6 +216,10 @@ transition: height .2s;
 .inputs .expand-header .iconexito-antecedentes{line-height:53px;}
 .inputs .expand-header .input-header p,
 .input-header.expand-input-header > p{font-size:22px; font-weight:700; color:#F6921D;}
+.input-header.expand-input-header > p{line-height:normal;}
+.input-header.expand-input-header > p span{font-size:18px;}
+.input-header.expand-input-header.text-center{text-align:center;}
+.input-header.expand-input-header.text-center .blue{color:#5BA1E6;}
 .inputs .expand-header .info{font-size:17px; margin-top:17px; line-height:normal; color:#5BA1E6;}
 .inputs .expand-header ul.info{list-style-type:disc; padding:0 22px;}
 .inputs .expand-header .input-header.signature p{color:#5BA1E6;}

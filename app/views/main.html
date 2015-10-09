@@ -56,7 +56,18 @@
         <span class="circle">
           <span class="iconexito-antecedentes"></span>
         </span>
-        <p>Datos de tu escuela</p>
+        <p>Datos de tu escuela <br>
+          <span>(Pueden participar todas las escuelas del país desde preescolar hasta bachillerato)</span>
+        </p>
+      </div>
+      <div layout="column" layout-fill flex="50">
+        <div layout="row" layout-align="start center" class="input-header">
+          <p>Clave de Centro de Trabajo (CCT)</p>
+        </div>
+        <md-input-container>
+          <label>CCT</label>
+          <input required ng-model="story.cct">
+        </md-input-container>
       </div>
       <div layout="column" layout-fill flex="50" layout-wrap>
         <div layout="row" layout-align="start center" class="input-header">
@@ -75,22 +86,22 @@
           </md-item-template>
         </md-autocomplete>
       </div>
-      <div layout="column" layout-fill flex="50">
-        <div layout="row" layout-align="start center" class="input-header">
-          <p>Clave de Centro de Trabajo (CCT)</p>
-        </div>
-        <md-input-container>
-          <label>CCT</label>
-          <input required ng-model="story.cct">
-        </md-input-container>
+    </md-card>
+
+    <md-card layout-padding layout-wrap layout='row'>
+      <div layout="row" flex="100" layout-align="start center" class="input-header expand-input-header">
+        <span class="circle">
+          <span class="iconexito-antecedentes"></span>
+        </span>
+        <p>Datos de quien registra la escuela</p>
       </div>
       <div layout="column" layout-fill flex="100">
         <div layout="row" layout-align="start center" class="input-header">
-          <p>Nombre de quien propone el proyecto</p>
+          <p>Nombre completo</p>
         </div>
         <md-input-container>
           <label>Nombre</label>
-          <input type='text'  ng-model="story.representativeNames">
+          <input type='text' required  ng-model="story.representativeNames">
         </md-input-container>
       </div>
       <div layout="column" layout-fill flex="50">
@@ -99,7 +110,7 @@
         </div>
         <md-input-container>
           <label>Escribe tu mail</label>
-          <input type='email'  ng-model="story.email" required>
+          <input type='email'  ng-model="story.email" ng-change="check()" required>
         </md-input-container>
       </div>
       <div layout="column" layout-fill flex="50">
@@ -111,6 +122,32 @@
           <input  ng-model="story.phone">
         </md-input-container>
       </div>
+      <div layout="column" layout-fill flex="50">
+        <div layout="row" layout-align="start center" class="input-header">
+          <p>Soy:</p>
+        </div>
+        <md-input-container flex='50'>
+          <md-select ng-model="story.iam" required>
+            <md-option value="Mamá">Mamá</md-option>
+            <md-option value="Papá">Papá</md-option>
+            <md-option value="Maestr@">Maestr@</md-option>
+            <md-option value="Director@">Director@</md-option>
+            <md-option value="Otro">Otro</md-option>
+          </md-select>
+        </md-input-container>
+      </div>
+      <div layout="column" layout-fill flex="50">
+        <div layout="row" layout-align="start center" class="input-header">
+          <p>¿Formas parte del consejo de participación social u organización de padres de familia?</p>
+        </div>
+        <md-input-container flex='50'>
+          <md-select ng-model="story.association" required>
+            <md-option value="Sí">Sí</md-option>
+            <md-option value="No">No</md-option>
+          </md-select>
+        </md-input-container>
+      </div>
+      <!--
       <div layout="column" layout-fill flex="100">
         <div layout="row" layout-align="start center" class="input-header">
           <p>Nombre de los integrantes de Asociación de Padres de Familia o Consejo de Participación Social (o de ambos).</p>
@@ -120,7 +157,58 @@
           <input type='text'  ng-model="story.associationNames">
         </md-input-container>
       </div>
+      -->
     </md-card>
+
+    <md-card layout-padding layout-wrap layout='row'>
+      <div layout="row" flex="100" layout-align="start center" class="input-header expand-input-header">
+        <span class="circle">
+          <span class="iconexito-antecedentes"></span>
+        </span>
+        <p>Tu proyecto</p>
+      </div>
+      <div layout="column" layout-fill flex="50">
+        <div layout="row" layout-align="start center" class="input-header">
+          <p>¿Cuáles son los principales retos o problemas de la escuela?</p>
+        </div>
+        <md-input-container>
+          <label>Retos o problemas</label>
+          <input required ng-model="story.schoolProblems">
+        </md-input-container>
+      </div>
+      <div layout="column" layout-fill flex="50">
+        <div layout="row" layout-align="start center" class="input-header">
+          <p>Descripción de su proyecto o acciones que quieren tomar.</p>
+        </div>
+        <md-input-container>
+          <label>Descripción</label>
+          <input required ng-model="story.activityDescription">
+        </md-input-container>
+      </div>
+      <div layout="column" layout-fill flex="50">
+        <div layout="row" layout-align="start center" class="input-header">
+          <p>¿Qué resultados esperan tener con su proyecto?</p>
+        </div>
+        <md-input-container>
+          <label>Descripción</label>
+          <input required ng-model="story.results">
+        </md-input-container>
+      </div>
+      <div layout="column" layout-fill flex="50">
+        <div layout="row" layout-align="start center" class="input-header">
+          <p>¿Quiénes van a participar en el proyecto?</p>
+        </div>
+        <md-input-container>
+          <label>Integrantes</label>
+          <input required ng-model="story.namesList">
+        </md-input-container>
+      </div>
+      <div layout-align="center center" layout="column" flex="100" class="send">
+        <md-button ng-if='!saved' class="md-raised md-primary" type="submit">Enviar registro</md-button>
+      </div>
+    </md-card>
+
+    <!--
     <md-card layout-padding layout-wrap layout='row'>
       <div layout="row" flex="100" layout-align="start center" class="input-header expand-input-header">
         <span class="circle">
@@ -295,6 +383,8 @@
         <md-button ng-if='!saved' class="md-raised md-primary" type="submit">Enviar registro</md-button>
       </div>
     </md-card>
+    -->
+
   </form>
   <!-- end form -->
   <div layout-fill layout='column' layout-align='center center' flex ng-if='saving' style='height:100%'>
@@ -305,6 +395,26 @@
     <span class="iconexito-listo"></span>
     <p class="success">¡Listo!</p>
     <p>Tu registro ya se envió</p>
+  </md-card>
+
+  <md-card layout-padding layout-wrap layout='row' ng-if="showForm">
+    <div layout="column" flex="100" layout-align="start center" class="input-header expand-input-header text-center">
+      <p>*A partir del 1ero de enero de 2016 te pediremos que nos compartas, a través de esta plataforma, tus experiencias y evidencias de lo que lograron.
+        <br>
+        <br>
+        Los mejores proyectos serán premiados y recibirán apoyos complementarios por Fundación Televisa y Primero Noticias.
+        <br>
+      </p>
+
+      <p class="blue">
+        <br>
+        ¿Tienes preguntas?
+        <br>
+        Escríbenos a:
+        <br>
+        <span>mamasypapaseneducaccion@fundaciontelevisa.org</span>
+      </p>
+    </div>
   </md-card>
   <div layout="row" layout-fill layout-align="space-around center" class="logos">
     <img src="images/fundacion.png">
