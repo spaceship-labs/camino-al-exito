@@ -121,7 +121,7 @@ angular.module('caminoAlExitoApp')
         $scope.saved = !e ? true : false;
         $scope.$apply();
         if(!e){
-          toggleSchoolMTE($scope.story.cct);
+          toggleSchoolMTE($scope.story.cct, $scope.story.email);
         }
       });
     };
@@ -137,6 +137,7 @@ angular.module('caminoAlExitoApp')
         url: 'http://mte.spaceshiplabs.com/api/suscribeEducacion',
         params: {
           cct: cct,
+          email: email
         }
       }).then(function(res) {
         if(res && res.data && res.data.cct){
@@ -146,7 +147,7 @@ angular.module('caminoAlExitoApp')
         }
       });
     }
-    //toggleSchoolMTE("17DZS0003Z");
+    //toggleSchoolMTE("17DZS0003Z",'email@email.com');
 
     //update school name
     //no founds name:
