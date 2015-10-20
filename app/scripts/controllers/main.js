@@ -52,6 +52,7 @@ angular.module('caminoAlExitoApp')
       }
     };
     $scope.getSchools = function(name) {
+      $scope.name_school = name;
       return $http({
         method: 'GET',
         url: 'http://mte.spaceshiplabs.com/api/escuelas',
@@ -84,7 +85,7 @@ angular.module('caminoAlExitoApp')
             console.log(story.$id);
             $scope.save = function(selectedSchool){
               $scope.saving = true;
-              $scope.story.school = selectedSchool && selectedSchool.nombre || $scope.story.school;
+              $scope.story.school = selectedSchool && selectedSchool.nombre || $scope.name_school;
               exists.$save($scope.story).then(function(){
                 $scope.saving = false;
                 $scope.saved = true;
@@ -114,7 +115,8 @@ angular.module('caminoAlExitoApp')
         alertNoFile();
         return;
       }*/
-      $scope.story.school = selectedSchool && selectedSchool.nombre || $scope.story.school;
+
+      $scope.story.school = selectedSchool && selectedSchool.nombre || $scope.name_school;
       $scope.saving = true;
       firebaseEntries.push().set($scope.story, function(e) {
         $scope.saving = false;
