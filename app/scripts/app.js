@@ -18,13 +18,18 @@ angular
     'firebase',
     'ngFileReader'
   ])
-  .config(function($routeProvider, $locationProvider) {
-    $locationProvider.html5Mode(true);
+  .config(function($routeProvider) {
+    //$locationProvider.html5Mode(true);
 
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
+        controllerAs: 'main'
+      })
+      .when('/update', {
+        templateUrl: 'views/update.html',
+        controller: 'UpdateCtrl',
         controllerAs: 'main'
       })
       .otherwise({

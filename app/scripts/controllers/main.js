@@ -149,6 +149,8 @@ angular.module('caminoAlExitoApp')
         }
       });
     }
+
+
     //toggleSchoolMTE("17DZS0003Z",'email@email.com');
 
     //update school name
