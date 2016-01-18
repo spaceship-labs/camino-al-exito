@@ -22,12 +22,12 @@ angular
     //$locationProvider.html5Mode(true);
 
     $routeProvider
-      .when('/', {
+      .when('/back', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
-      .when('/update', {
+      .when('/', {
         templateUrl: 'views/update.html',
         controller: 'UpdateCtrl',
         controllerAs: 'main'

@@ -73,7 +73,7 @@ angular.module('caminoAlExitoApp')
         url: 'http://mte.spaceshiplabs.com/api/escuelas',
         params: {
           term: name,
-          //solr: true
+          solr: true
         }
       }).then(function(res) {
         return res.data && res.data.escuelas || [];
