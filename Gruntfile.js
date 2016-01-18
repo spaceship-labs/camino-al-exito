@@ -477,7 +477,7 @@ module.exports = function (grunt) {
     'cssmin',
     'uglify',
     'filerev',
-    'copy:setHref',
+    //'copy:setHref',
     'processhtml',
     'usemin',
     'htmlmin'
