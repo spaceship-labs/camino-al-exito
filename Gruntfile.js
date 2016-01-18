@@ -378,7 +378,19 @@ module.exports = function (grunt) {
         cwd: '<%= yeoman.app %>/styles',
         dest: '.tmp/styles/',
         src: '{,*/}*.css'
-      }
+      },
+      setHref: {
+        expand: true,
+        cwd: '<%= yeoman.dist %>',
+        dest: '<%= yeoman.dist %>',
+        src: 'index.html',
+        options: {
+          process: function (content) {
+            var baseHref = process.env.BRANCH === 'dev'? '/educaccion/' : '/';
+            return content.replace(/#{HREFDIST}/g, baseHref);
+          }
+        }
+      },
     },
 
     // Run some tasks in parallel to speed up the build process
@@ -465,6 +477,7 @@ module.exports = function (grunt) {
     'cssmin',
     'uglify',
     'filerev',
+    'copy:setHref',
     'processhtml',
     'usemin',
     'htmlmin'
