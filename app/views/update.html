@@ -91,6 +91,15 @@
           <p>* {{f.name}} - {{f.size | fileSize}}</p>
         </div>
       </div>
+      <div layout="column" layout-fill flex="50" ng-show="info">
+        <div layout="row" layout-align="start center" class="input-header">
+          <p>Anexa videos</p>
+        </div>
+        <md-input-container>
+          <label>Anexa videos subiendolos primero a youtube y luego pegando aqui el link</label>
+          <textarea ng-model="story.video"></textarea>
+        </md-input-container>
+      </div>
       <div layout-align="center center" layout="column" flex="100" class="send">
         <md-button ng-if='!info' class="md-raised md-primary" type="submit">Obtener </md-button>
       </div>
