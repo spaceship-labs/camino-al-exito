@@ -69,23 +69,6 @@
           <input ng-model="story.cct">
         </md-input-container>
       </div>
-      <div layout="column" layout-fill flex="50" layout-wrap>
-        <div layout="row" layout-align="start center" class="input-header">
-          <p>Nombre de tu escuela</p>
-        </div>
-        <md-autocomplete md-input-name="autocompleteField" md-input-minlength="2" md-search-text="searchText" md-items="item in getSchools(searchText)" md-selected-item='selectedSchool' md-selected-item-change='selectSchool(selectedSchool)' md-item-text="item.nombre+', '+item.nom_municipio" md-floating-label="Nombre de la escuela" ng-model='story.school'>
-          <md-item-template>
-            <!-- <span md-highlight-text="searchText">{{item.nombre}}, {{item.nom_municipio}}</span>-->
-            <a tabindex="-1" class="autocomple_item">
-              <i class="icon-escuela-01"></i>
-              <strong>
-                <span>{{item.nombre}}</span> (<span >{{item.nom_nivel || item.nivel}}</span>)
-                <span>{{item.direccion}}</span>
-              </strong>
-            </a>
-          </md-item-template>
-        </md-autocomplete>
-      </div>
       <div layout="column" layout-fill flex="50">
         <div layout="row" layout-align="start center" class="input-header">
           <p>Correo electrónico de contacto</p>
