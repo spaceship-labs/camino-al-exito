@@ -34,6 +34,10 @@ angular.module('caminoAlExitoApp')
       });
     };
 
+    $scope.openFile = function(raw) {
+      window.open(raw);
+    };
+
     $scope.onReaded = function(e, file) {
       var files = $scope.story.files || [];
       $scope.story.files = $scope.story.files.push ? files : Object.keys(files).map(function(k){ return files[k];});

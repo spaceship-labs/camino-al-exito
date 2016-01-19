@@ -10,10 +10,10 @@
             <div class="pic"></div>
             <div class="triangle"></div>
           </div>
-          <p class="custom1 upper">¿Eres madre o padre de familia y participas en la escuela de tus hijos para mejorar su aprendizaje?</p>
-          <p>Entonces, esta convocatoria es para ti.</p>
-          <p class="custom2  upper">Fundación Televisa, Primero Noticias y MejoraTuEscuela.org </br><span>te invitamos a que le cuentes a México tu historia de éxito.</span></p>
-          <p>El objetivo de esta convocatoria es alentar a las sociedades de padres de familia a participar activamente en el desarrollo y el aprendizaje de sus hijos e hijas de la mano de sus maestros y directores. Buscamos historias en las que se construyan propuestas creativas, innovadoras y viables para solucionar necesidades educativas reales. </p>
+          <p class="custom1 upper">¿Registraste tu proyecto?</p>
+          <p>Ahora es tiempo de subir tus evidencias.</p>
+          <p>Puedes compartir archivos de texto, fotografías y/o la liga de tus videos para que sea más fácil evaluar tu proyecto.</p>
+          <p>Recuerda que un comité seleccionará los mejores proyectos y después se hará una votación pública de los seleccionados para determinar a los ganadores.</p>
         </div>
         <p class="question upper">¿Tienes una historia de éxito?</p>
         <p class="cuenta upper">¡Cuéntanosla!</p>
@@ -24,7 +24,7 @@
             <span class="iconexito-pdf">
             </span>
             <p class="upper">Leer las bases</p>
-            <a class="total-link" target='_blank' href="/BasesConvocatoria_PapasYMamasEnEducAccion.pdf"></a>
+            <a class="total-link" target='_blank' href="/instrucciones.pdf"></a>
           </div>
         </div>
       </div>
@@ -41,9 +41,11 @@
   <div class="register info">
     <div layout="column" layout-align="center center">
       <span class="iconexito-registro"></span>
-      <h1>Actualiza tu historia</h1>
-      <p>Fecha limite de parte 1:</p>
-      <p><strong>31 de Diciembre del 2015</strong></p>
+      <h1>Registra tus evidencias</h1>
+      <p>Si registraste tu proyecto antes del 31 de diciembre,</p>
+      <p> es tiempo de subir tus evidencias.</p>
+      <p>Fecha limite:</p>
+      <p><strong>31 de Marzo de 2016</strong></p>
       <a class="down" ng-click="showForm = !showForm"></a>
     </div>
   </div>
@@ -56,9 +58,7 @@
         <span class="circle">
           <span class="iconexito-antecedentes"></span>
         </span>
-        <p>Datos de tu escuela <br>
-          <span>(Pueden participar todas las escuelas del país desde preescolar hasta bachillerato)</span>
-        </p>
+        <p>Ubica tu registro:</p>
       </div>
       <div layout="column" layout-fill flex="50">
         <div layout="row" layout-align="start center" class="input-header">
@@ -80,7 +80,7 @@
       </div>
 
       <div layout="column" layout-fill flex="100" ng-show="info">
-        <div layout="column" layout-align="start" class="input-header">
+        <div layout="column" layout-align="center center" class="input-header">
           <p>Por favor anexa archivos</p>
         </div>
         <md-input-container>
@@ -88,12 +88,13 @@
           <div ng-file-reader on-readed="onReaded( event, file )" read-method="readMethod" multiple></div>
         </md-input-container>
         <div layout="column"  layout-align="start" class="input-header" ng-repeat="f in story.files">
-          <p>* {{f.name}} - {{f.size | fileSize}}</p>
+          <p>* {{f.name}} - {{f.size | fileSize}} (<a target='_blank' ng-click="openFile(f.raw)">ver</a>)</p>
         </div>
       </div>
-      <div layout="column" layout-fill flex="50" ng-show="info">
-        <div layout="row" layout-align="start center" class="input-header">
-          <p>Anexa videos</p>
+      <div layout="column" layout-fill flex="100" ng-show="info">
+        <div layout="column" layout-align="center center" class="input-header">
+          <p>Por favor anexa videos</p>
+          <p><span>(<a target='_blank' href="/youtube.pdf">Instrucciones</a></span>)</p>
         </div>
         <md-input-container>
           <label>Anexa videos subiendolos primero a youtube y luego pegando aqui el link</label>
@@ -108,6 +109,129 @@
       </div>
     </md-card>
 
+    <div ng-if="info">
+    <md-card layout-padding layout-wrap layout='row'>
+      <div layout="row" flex="100" layout-align="start center" class="input-header expand-input-header">
+        <span class="circle">
+          <span class="iconexito-antecedentes"></span>
+        </span>
+        <p>Datos de quien registra la escuela</p>
+      </div>
+      <div layout="column" layout-fill flex="100">
+        <div layout="row" layout-align="start center" class="input-header">
+          <p>Nombre completo</p>
+        </div>
+        <md-input-container>
+          <label>Nombre</label>
+          <input type='text' required  ng-model="story.representativeNames">
+        </md-input-container>
+      </div>
+      <div layout="column" layout-fill flex="50">
+        <div layout="row" layout-align="start center" class="input-header">
+          <p>Correo electrónico de contacto</p>
+        </div>
+        <md-input-container>
+          <label>Escribe tu mail</label>
+          <input type='email'  ng-model="story.email" ng-change="check()" required>
+        </md-input-container>
+      </div>
+      <div layout="column" layout-fill flex="50">
+        <div layout="row" layout-align="start center" class="input-header">
+          <p>Teléfono de contacto</p>
+        </div>
+        <md-input-container flex='50'>
+          <label>Teléfono</label>
+          <input  ng-model="story.phone">
+        </md-input-container>
+      </div>
+      <div layout="column" layout-fill flex="50">
+        <div layout="row" layout-align="start center" class="input-header">
+          <p>Soy:</p>
+        </div>
+        <md-input-container flex='50'>
+          <md-select ng-model="story.iam" required>
+            <md-option value="Mamá">Mamá</md-option>
+            <md-option value="Papá">Papá</md-option>
+            <md-option value="Maestr@">Maestr@</md-option>
+            <md-option value="Director@">Director@</md-option>
+            <md-option value="Otro">Otro</md-option>
+          </md-select>
+        </md-input-container>
+      </div>
+      <div layout="column" layout-fill flex="50">
+        <div layout="row" layout-align="start center" class="input-header">
+          <p>¿Formas parte del consejo de participación social u organización de padres de familia?</p>
+        </div>
+        <md-input-container flex='50'>
+          <md-select ng-model="story.association" required>
+            <md-option value="Sí">Sí</md-option>
+            <md-option value="No">No</md-option>
+          </md-select>
+        </md-input-container>
+      </div>
+      <!--
+      <div layout="column" layout-fill flex="100">
+        <div layout="row" layout-align="start center" class="input-header">
+          <p>Nombre de los integrantes de Asociación de Padres de Familia o Consejo de Participación Social (o de ambos).</p>
+        </div>
+        <md-input-container>
+          <label>Nombre</label>
+          <input type='text'  ng-model="story.associationNames">
+        </md-input-container>
+      </div>
+      -->
+    </md-card>
+
+    <md-card layout-padding layout-wrap layout='row'>
+      <div layout="row" flex="100" layout-align="start center" class="input-header expand-input-header">
+        <span class="circle">
+          <span class="iconexito-antecedentes"></span>
+        </span>
+        <p>Tu proyecto</p>
+      </div>
+      <div layout="column" layout-fill flex="50">
+        <div layout="row" layout-align="start center" class="input-header">
+          <p>¿Cuáles son los principales retos o problemas de la escuela?</p>
+        </div>
+        <md-input-container>
+          <label>Retos o problemas</label>
+          <input required ng-model="story.schoolProblems">
+        </md-input-container>
+      </div>
+      <div layout="column" layout-fill flex="50">
+        <div layout="row" layout-align="start center" class="input-header">
+          <p>Descripción de su proyecto o acciones que quieren tomar.</p>
+        </div>
+        <md-input-container>
+          <label>Descripción</label>
+          <input required ng-model="story.activityDescription">
+        </md-input-container>
+      </div>
+      <div layout="column" layout-fill flex="50">
+        <div layout="row" layout-align="start center" class="input-header">
+          <p>¿Qué resultados esperan tener con su proyecto?</p>
+        </div>
+        <md-input-container>
+          <label>Descripción</label>
+          <input required ng-model="story.results">
+        </md-input-container>
+      </div>
+      <div layout="column" layout-fill flex="50">
+        <div layout="row" layout-align="start center" class="input-header">
+          <p>¿Quiénes van a participar en el proyecto?</p>
+        </div>
+        <md-input-container>
+          <label>Integrantes</label>
+          <input required ng-model="story.namesList">
+        </md-input-container>
+      </div>
+      <div layout-align="center center" layout="column" flex="100" class="send">
+        <md-button ng-if='!saved' class="md-raised md-primary" type="submit">Actualizar registro</md-button>
+      </div>
+    </md-card>
+
+
+    </div>
 
   </form>
   <!-- end form -->
@@ -127,13 +251,6 @@
 
   <md-card layout-padding layout-wrap layout='row' ng-if="showForm">
     <div layout="column" flex="100" layout-align="start center" class="input-header expand-input-header text-center">
-      <p>*A partir del 1ero de enero de 2016 te pediremos que nos compartas, a través de esta plataforma, tus experiencias y evidencias de lo que lograron.
-        <br>
-        <br>
-        Los mejores proyectos serán premiados y recibirán apoyos complementarios por Fundación Televisa y Primero Noticias.
-        <br>
-      </p>
-
       <p class="blue">
         <br>
         ¿Tienes preguntas?
