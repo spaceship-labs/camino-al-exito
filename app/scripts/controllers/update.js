@@ -17,9 +17,13 @@ angular.module('caminoAlExitoApp')
     $scope.files = [];
 
     $scope.save = function() {
-      console.log($scope.story);
       if (!$scope.info) {
-        return $scope.search();
+        if($scope.story.email) {
+          $scope.searchBy('email', $scope.story.email);
+        }else if($scope.story.cct) {
+          $scope.searchBy('cct', $scope.story.cct);
+        }
+        return;
       }
 
       $scope.saving = true;
@@ -44,6 +48,22 @@ angular.module('caminoAlExitoApp')
           .ok('Ok')
         );
       }
+    };
+
+    $scope.searchBy = function(field, value){
+      $scope.searching = true;
+      var exists = $firebaseArray(firebaseEntries.orderByChild(field).equalTo(value));
+      exists.$loaded(function(data){
+        console.log('data', data);
+        data.reverse().some(function(story){
+          $scope.story = exists.$getRecord(story.$id);
+          $scope.info = true;
+          $scope.exists = exists;
+          console.log('found', story);
+          return true;
+        });
+        $scope.searching = false;
+      });
     };
 
     $scope.search = function() {

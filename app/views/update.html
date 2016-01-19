@@ -66,14 +66,14 @@
         </div>
         <md-input-container>
           <label>CCT</label>
-          <input required ng-model="story.cct">
+          <input ng-model="story.cct">
         </md-input-container>
       </div>
       <div layout="column" layout-fill flex="50" layout-wrap>
         <div layout="row" layout-align="start center" class="input-header">
           <p>Nombre de tu escuela</p>
         </div>
-        <md-autocomplete required md-input-name="autocompleteField" md-input-minlength="2" md-search-text="searchText" md-items="item in getSchools(searchText)" md-selected-item='selectedSchool' md-selected-item-change='selectSchool(selectedSchool)' md-item-text="item.nombre+', '+item.nom_municipio" md-floating-label="Nombre de la escuela" ng-model='story.school'>
+        <md-autocomplete md-input-name="autocompleteField" md-input-minlength="2" md-search-text="searchText" md-items="item in getSchools(searchText)" md-selected-item='selectedSchool' md-selected-item-change='selectSchool(selectedSchool)' md-item-text="item.nombre+', '+item.nom_municipio" md-floating-label="Nombre de la escuela" ng-model='story.school'>
           <md-item-template>
             <!-- <span md-highlight-text="searchText">{{item.nombre}}, {{item.nom_municipio}}</span>-->
             <a tabindex="-1" class="autocomple_item">
@@ -92,7 +92,7 @@
         </div>
         <md-input-container>
           <label>Escribe tu mail</label>
-          <input type='email'  ng-model="story.email" ng-change="check()" required>
+          <input type='email'  ng-model="story.email" ng-change="check()" >
         </md-input-container>
       </div>
 
