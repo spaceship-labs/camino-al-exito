@@ -1,0 +1,154 @@
+<div id="camino" layout="column">
+  <div layout="row" layout-fill layout-md="column">
+    <div class="intro left" flex="60" flex-sm="100" flex-md="100">
+      <div layout="column" layout-align="center center" layout-fill layout-padding>
+        <h1 class="upper">CONVOCATORIA</h1>
+        <p class="sub">Fundación Televisa y Primero Noticias, Contando las mejores historias</p>
+        <p class="sub">Papás y mamás en <span class='highlight'> <span>Educ</span><span>Acción</span></span></p>
+        <div class="quote">
+          <div class="logo-educacion" hide show-gt-md>
+            <div class="pic"></div>
+            <div class="triangle"></div>
+          </div>
+          <p class="custom1 upper">¿Eres madre o padre de familia y participas en la escuela de tus hijos para mejorar su aprendizaje?</p>
+          <p>Entonces, esta convocatoria es para ti.</p>
+          <p class="custom2  upper">Fundación Televisa, Primero Noticias y MejoraTuEscuela.org </br><span>te invitamos a que le cuentes a México tu historia de éxito.</span></p>
+          <p>El objetivo de esta convocatoria es alentar a las sociedades de padres de familia a participar activamente en el desarrollo y el aprendizaje de sus hijos e hijas de la mano de sus maestros y directores. Buscamos historias en las que se construyan propuestas creativas, innovadoras y viables para solucionar necesidades educativas reales. </p>
+        </div>
+        <p class="question upper">¿Tienes una historia de éxito?</p>
+        <p class="cuenta upper">¡Cuéntanosla!</p>
+        <p class="share upper">¡La queremos compartir!</p>
+        <div class="mbases" hide-md></div>
+        <div class="bases" layout="column" layout-align="space-around center">
+          <div layout="row" class="border-link" layout-align="center center">
+            <span class="iconexito-pdf">
+            </span>
+            <p class="upper">Leer las bases</p>
+            <a class="total-link" target='_blank' href="/instrucciones.pdf"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="intro right" flex hide-sm layout='column'>
+      <div class='logos' layout-align="space-around center" layout='row'>
+        <img src="images/fundacion_sm.png">
+        <img src="images/primero_sm.png">
+        <img src="images/mejora_sm.png">
+      </div>
+      <div class="child-pic"></div>
+    </div>
+  </div>
+  <div class="register info">
+    <div layout="column" layout-align="center center">
+      <span class="iconexito-registro"></span>
+      <h1>Actualiza tu historia</h1>
+      <p>Fecha limite de parte 1:</p>
+      <p><strong>31 de Diciembre del 2015</strong></p>
+      <a class="down" ng-click="showForm = !showForm"></a>
+    </div>
+  </div>
+</div>
+<div class="container inputs">
+  <a id="registro"></a>
+  <form ng-if='!saved &amp;&amp; !saving &amp;&amp; showForm' ng-submit="save(selectedSchool)">
+    <md-card layout-padding layout-wrap layout='row'>
+      <div layout="row" flex="100" layout-align="start center" class="input-header expand-input-header">
+        <span class="circle">
+          <span class="iconexito-antecedentes"></span>
+        </span>
+        <p>Datos de tu escuela <br>
+          <span>(Pueden participar todas las escuelas del país desde preescolar hasta bachillerato)</span>
+        </p>
+      </div>
+      <div layout="column" layout-fill flex="50">
+        <div layout="row" layout-align="start center" class="input-header">
+          <p>Clave de Centro de Trabajo (CCT)</p>
+        </div>
+        <md-input-container>
+          <label>CCT</label>
+          <input ng-model="story.cct">
+        </md-input-container>
+      </div>
+      <div layout="column" layout-fill flex="50">
+        <div layout="row" layout-align="start center" class="input-header">
+          <p>Correo electrónico de contacto</p>
+        </div>
+        <md-input-container>
+          <label>Escribe tu mail</label>
+          <input type='email'  ng-model="story.email" ng-change="check()" >
+        </md-input-container>
+      </div>
+
+      <div layout="column" layout-fill flex="100" ng-show="info">
+        <div layout="column" layout-align="start" class="input-header">
+          <p>Por favor anexa archivos</p>
+        </div>
+        <md-input-container>
+          <p class="warning">Sube el archivo desde tu computadora. El maximo es de 10MB</p>
+          <div ng-file-reader on-readed="onReaded( event, file )" read-method="readMethod" multiple></div>
+        </md-input-container>
+        <div layout="column"  layout-align="start" class="input-header" ng-repeat="f in story.files">
+          <p>* {{f.name}} - {{f.size | fileSize}}</p>
+        </div>
+      </div>
+      <div layout="column" layout-fill flex="50" ng-show="info">
+        <div layout="row" layout-align="start center" class="input-header">
+          <p>Anexa videos</p>
+        </div>
+        <md-input-container>
+          <label>Anexa videos subiendolos primero a youtube y luego pegando aqui el link</label>
+          <textarea ng-model="story.video"></textarea>
+        </md-input-container>
+      </div>
+      <div layout-align="center center" layout="column" flex="100" class="send">
+        <md-button ng-if='!info' class="md-raised md-primary" type="submit">Obtener </md-button>
+      </div>
+      <div layout-align="center center" layout="column" flex="100" class="send">
+        <md-button ng-if='info' class="md-raised md-primary" type="submit">Enviar </md-button>
+      </div>
+    </md-card>
+
+
+  </form>
+  <!-- end form -->
+  <div layout-fill layout='column' layout-align='center center' flex ng-if='saving' style='height:100%'>
+    <md-progress-linear md-mode="indeterminate"></md-progress-linear>
+    <p>Guardando....</p>
+  </div>
+  <div layout-fill layout='column' layout-align='center center' flex ng-if='searching' style='height:100%'>
+    <md-progress-linear md-mode="indeterminate"></md-progress-linear>
+    <p>buscando</p>
+  </div>
+  <md-card layout-padding ng-if='saved' class='send' layout-align='center center'>
+    <span class="iconexito-listo"></span>
+    <p class="success">¡Listo!</p>
+    <p>Tu registro ya se envió</p>
+  </md-card>
+
+  <md-card layout-padding layout-wrap layout='row' ng-if="showForm">
+    <div layout="column" flex="100" layout-align="start center" class="input-header expand-input-header text-center">
+      <p>*A partir del 1ero de enero de 2016 te pediremos que nos compartas, a través de esta plataforma, tus experiencias y evidencias de lo que lograron.
+        <br>
+        <br>
+        Los mejores proyectos serán premiados y recibirán apoyos complementarios por Fundación Televisa y Primero Noticias.
+        <br>
+      </p>
+
+      <p class="blue">
+        <br>
+        ¿Tienes preguntas?
+        <br>
+        Escríbenos a:
+        <br>
+        <span>mamasypapaseneducaccion@fundaciontelevisa.org</span>
+        <br>
+        O por teléfono con Yolanda Gudiño al: (55) 5261-3277
+      </p>
+    </div>
+  </md-card>
+  <div layout="row" layout-fill layout-align="space-around center" class="logos">
+    <img src="images/fundacion.png">
+    <img src="images/1noticias.png">
+    <img src="images/logo_mejora.png">
+  </div>
+</div>
