@@ -40,7 +40,7 @@ angular.module('caminoAlExitoApp')
 
     $scope.onReaded = function(e, file) {
       var files = $scope.story.files || [];
-      $scope.story.files = $scope.story.files.push ? files : Object.keys(files).map(function(k){ return files[k];});
+      $scope.story.files = !files.length ? files : Object.keys(files).map(function(k){ return files[k];});
       if (file.size < 10000000) {
         $scope.story.files.push({raw: e.target.result, name: file.name, size: file.size, type: file.type });
       } else {
