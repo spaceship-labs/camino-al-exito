@@ -28,9 +28,10 @@ angular
         controllerAs: 'main'
       })
       .when('/', {
-        templateUrl: 'views/update.html',
-        controller: 'UpdateCtrl',
-        controllerAs: 'main'
+        //templateUrl: 'views/update.html',
+        templateUrl: 'views/main.html',
+        controller: 'HomeCtrl',
+        controllerAs: 'home'
       })
       .otherwise({
         redirectTo: '/'

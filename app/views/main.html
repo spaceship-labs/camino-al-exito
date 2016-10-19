@@ -60,15 +60,6 @@
           <span>(Pueden participar todas las escuelas del país desde preescolar hasta bachillerato)</span>
         </p>
       </div>
-      <div layout="column" layout-fill flex="50">
-        <div layout="row" layout-align="start center" class="input-header">
-          <p>Clave de Centro de Trabajo (CCT)</p>
-        </div>
-        <md-input-container>
-          <label>CCT</label>
-          <input required ng-model="story.cct">
-        </md-input-container>
-      </div>
       <div layout="column" layout-fill flex="50" layout-wrap>
         <div layout="row" layout-align="start center" class="input-header">
           <p>Nombre de tu escuela</p>
@@ -86,6 +77,66 @@
           </md-item-template>
         </md-autocomplete>
       </div>
+
+      <div layout="column" layout-fill flex="50">
+        <div layout="row" layout-align="start center" class="input-header">
+          <p>Clave de Centro de Trabajo (CCT)</p>
+        </div>
+        <md-input-container>
+          <label>CCT</label>
+          <input required ng-model="story.cct">
+        </md-input-container>
+      </div>
+
+      <div layout="column" layout-fill flex="50">
+        <div layout="row" layout-align="start center" class="input-header">
+          <p>Calle</p>
+        </div>
+        <md-input-container>
+          <label>Calle</label>
+          <input required ng-model="story.street">
+        </md-input-container>
+      </div>
+
+      <div layout="column" layout-fill flex="50">
+        <div layout="row" layout-align="start center" class="input-header">
+          <p>Número interior y exterior</p>
+        </div>
+        <md-input-container>
+          <label>Número interior y exterior</label>
+          <input required ng-model="story.nums">
+        </md-input-container>
+      </div>
+
+      <div layout="column" layout-fill flex="50">
+        <div layout="row" layout-align="start center" class="input-header">
+          <p>Colonia</p>
+        </div>
+        <md-input-container>
+          <label>Colonia</label>
+          <input required ng-model="story.colony">
+        </md-input-container>
+      </div>
+
+      <div layout="column" layout-fill flex="50">
+        <div layout="row" layout-align="start center" class="input-header">
+          <p>Delegación o Municipio</p>
+        </div>
+        <md-input-container>
+          <label>Delegación o Municipio</label>
+          <input required ng-model="story.delegation">
+        </md-input-container>
+      </div>
+
+      <div layout="column" layout-fill flex="50">
+        <div layout="row" layout-align="start center" class="input-header">
+          <p>Código Postal</p>
+        </div>
+        <md-input-container>
+          <label>Delegación o Municipio</label>
+          <input required ng-model="story.postalCode">
+        </md-input-container>
+      </div>
     </md-card>
 
     <md-card layout-padding layout-wrap layout='row'>
@@ -93,26 +144,18 @@
         <span class="circle">
           <span class="iconexito-antecedentes"></span>
         </span>
-        <p>Datos de quien registra la escuela</p>
+        <p>Datos del representante</p>
       </div>
       <div layout="column" layout-fill flex="100">
         <div layout="row" layout-align="start center" class="input-header">
-          <p>Nombre completo</p>
+          <p>Nombre del representante del Consejo Escolar o de la sociedad de padres de familia</p>
         </div>
         <md-input-container>
           <label>Nombre</label>
           <input type='text' required  ng-model="story.representativeNames">
         </md-input-container>
       </div>
-      <div layout="column" layout-fill flex="50">
-        <div layout="row" layout-align="start center" class="input-header">
-          <p>Correo electrónico de contacto</p>
-        </div>
-        <md-input-container>
-          <label>Escribe tu mail</label>
-          <input type='email'  ng-model="story.email" ng-change="check()" required>
-        </md-input-container>
-      </div>
+
       <div layout="column" layout-fill flex="50">
         <div layout="row" layout-align="start center" class="input-header">
           <p>Teléfono de contacto</p>
@@ -122,42 +165,17 @@
           <input  ng-model="story.phone">
         </md-input-container>
       </div>
+
       <div layout="column" layout-fill flex="50">
         <div layout="row" layout-align="start center" class="input-header">
-          <p>Soy:</p>
-        </div>
-        <md-input-container flex='50'>
-          <md-select ng-model="story.iam" required>
-            <md-option value="Mamá">Mamá</md-option>
-            <md-option value="Papá">Papá</md-option>
-            <md-option value="Maestr@">Maestr@</md-option>
-            <md-option value="Director@">Director@</md-option>
-            <md-option value="Otro">Otro</md-option>
-          </md-select>
-        </md-input-container>
-      </div>
-      <div layout="column" layout-fill flex="50">
-        <div layout="row" layout-align="start center" class="input-header">
-          <p>¿Formas parte del consejo de participación social u organización de padres de familia?</p>
-        </div>
-        <md-input-container flex='50'>
-          <md-select ng-model="story.association" required>
-            <md-option value="Sí">Sí</md-option>
-            <md-option value="No">No</md-option>
-          </md-select>
-        </md-input-container>
-      </div>
-      <!--
-      <div layout="column" layout-fill flex="100">
-        <div layout="row" layout-align="start center" class="input-header">
-          <p>Nombre de los integrantes de Asociación de Padres de Familia o Consejo de Participación Social (o de ambos).</p>
+          <p>Correo electrónico de contacto</p>
         </div>
         <md-input-container>
-          <label>Nombre</label>
-          <input type='text'  ng-model="story.associationNames">
+          <label>E-Mail</label>
+          <input type='email'  ng-model="story.email" ng-change="check()" required>
         </md-input-container>
       </div>
-      -->
+
     </md-card>
 
     <md-card layout-padding layout-wrap layout='row'>
@@ -167,16 +185,18 @@
         </span>
         <p>Tu proyecto</p>
       </div>
-      <div layout="column" layout-fill flex="50">
+
+      <div layout="column" layout-fill flex="100">
         <div layout="row" layout-align="start center" class="input-header">
-          <p>¿Cuáles son los principales retos o problemas de la escuela?</p>
+          <p>Nombre del proyecto</p>
         </div>
         <md-input-container>
           <label>Retos o problemas</label>
-          <input required ng-model="story.schoolProblems">
+          <input required ng-model="story.projectName">
         </md-input-container>
       </div>
-      <div layout="column" layout-fill flex="50">
+
+      <div layout="column" layout-fill flex="100">
         <div layout="row" layout-align="start center" class="input-header">
           <p>Descripción de su proyecto o acciones que quieren tomar.</p>
         </div>
@@ -185,205 +205,44 @@
           <input required ng-model="story.activityDescription">
         </md-input-container>
       </div>
-      <div layout="column" layout-fill flex="50">
-        <div layout="row" layout-align="start center" class="input-header">
-          <p>¿Qué resultados esperan tener con su proyecto?</p>
-        </div>
-        <md-input-container>
-          <label>Descripción</label>
-          <input required ng-model="story.results">
-        </md-input-container>
-      </div>
-      <div layout="column" layout-fill flex="50">
-        <div layout="row" layout-align="start center" class="input-header">
-          <p>¿Quiénes van a participar en el proyecto?</p>
-        </div>
-        <md-input-container>
-          <label>Integrantes</label>
-          <input required ng-model="story.namesList">
-        </md-input-container>
-      </div>
-      <div layout-align="center center" layout="column" flex="100" class="send">
-        <md-button ng-if='!saved' class="md-raised md-primary" type="submit">Enviar registro</md-button>
-      </div>
     </md-card>
 
-    <!--
     <md-card layout-padding layout-wrap layout='row'>
       <div layout="row" flex="100" layout-align="start center" class="input-header expand-input-header">
         <span class="circle">
           <span class="iconexito-antecedentes"></span>
         </span>
-        <p>Beneficiarios de la escuela</p>
+        <p>Evidencia</p>
       </div>
+
       <div layout="column" layout-fill flex="100">
-        <div layout="column" layout-align="start" class="input-header">
-          <p>Características de la escuela</p>
-          <p class="description">Antigüedad, estado de la infraestructura y servicios a los que tiene –o no- acceso: drenaje, baños, agua potable, electricidad, conectividad.</p>
+        <div layout="column" layout-align="center center" class="input-header">
+          <p>Proyecto en archivo de Word no mayor a 2 cuartillas con la siguiente información, fotografías tanto del proceso como del resultado final (formato JPEG, TNG o GIF) o archivos Power Point</p>
         </div>
         <md-input-container>
-          <label>Características de la escuela</label>
-          <textarea  ng-model="story.schoolFeatures" rows="4"></textarea>
+          <p class="warning">Adjunta evidencia desde tu computadora. El maximo es de 10MB</p>
+          <div ng-file-reader on-readed="onReaded( event, file )" read-method="readMethod" multiple></div>
         </md-input-container>
+        <div layout="column"  layout-align="start" class="input-header" ng-repeat="f in story.files">
+          <p>* {{f.name}} - {{f.size | fileSize}} (<a target='_blank' ng-click="openFile(f.raw)">ver</a>)</p>
+        </div>
       </div>
-      <div layout="column" layout-fill flex="100">
-        <div layout="column" layout-align="start" class="input-header">
-          <p>Número de alumnos en la matrícula</p>
-          <p class="description">¿Cuántos hombres? ¿Cuántas mujeres?</p>
+
+      <div layout="column" layout-fill flex="50">
+        <div layout="row" layout-align="start center" class="input-header">
+          <p>Videos</p>
         </div>
         <md-input-container>
-          <label>Número de alumnos</label>
-          <input type='text'  ng-model="story.studentsNumber">
+          <label>Sólo enlaces de Youtube</label>
+          <textarea ng-model="story.videoLinks">
+          </textarea>
         </md-input-container>
       </div>
-      <div layout="column" layout-fill flex="100">
-        <div layout="column" layout-align="start" class="input-header">
-          <p>Descripción del entorno familiar y social de la población beneficiada</p>
-          <p class="description">Por ejemplo: si es zona de alta marginación; características de seguridad y prosperidad de la localidad; tipo de composición de los hogares de los alumnos (familia ampliada, jefa o jefe de familia solo, hacinamiento, etc).</p>
-        </div>
-        <md-input-container>
-          <label>Descripción</label>
-          <textarea  ng-model="story.environmentDescription" rows="4"></textarea>
-        </md-input-container>
-      </div>
-      <div layout="column" layout-fill flex="100">
-        <div layout="column" layout-align="start" class="input-header">
-          <p>Principales problemas en el entorno de la escuela</p>
-          <p class="description">¿La Escuela ha recibido recursos por parte del gobierno federal o estatal para atender estas problemáticas? </p>
-        </div>
-        <md-input-container>
-          <label>Principales problemas</label>
-          <textarea  ng-model="story.schoolProblems" rows="4"></textarea>
-        </md-input-container>
-      </div>
-    </md-card>
-    <md-card layout-padding layout-wrap layout='row'>
-      <div layout="row" flex="100" layout-align="start center" class="input-header expand-input-header">
-        <span class="circle">
-          <span class="iconexito-antecedentes"></span>
-        </span>
-        <p>Antecedentes</p>
-      </div>
-      <div layout="column" layout-fill flex="100">
-        <div layout="column" layout-align="start" class="input-header">
-          <p>Problemática que se busca resolver</p>
-          <p class="description">¿Por qué es un problema actual? ¿Qué lo origina?</p>
-        </div>
-        <md-input-container>
-          <label>Problemática</label>
-          <textarea  ng-model="story.problematic" rows="4"></textarea>
-        </md-input-container>
-      </div>
-      <div layout="column" layout-fill flex="100">
-        <div layout="column" layout-align="start" class="input-header">
-          <p>Breve justificación de por qué se considera importante por la comunidad educativa </p>
-          <p class="description">Por qué, si lo resolvemos, se va a reflejar en mejores condiciones para el aprendizaje de nuestros hijos?</p>
-        </div>
-        <md-input-container>
-          <label>Justificación</label>
-          <textarea  ng-model="story.justification" rows="4"></textarea>
-        </md-input-container>
-      </div>
-    </md-card>
-    <md-card layout-padding layout-wrap layout='row'>
-      <div layout="row" flex="100" layout-align="start center" class="input-header expand-input-header">
-        <span class="circle">
-          <span class="iconexito-antecedentes"></span>
-        </span>
-        <p>Objetivos del proyecto</p>
-      </div>
-      <div layout="column" layout-fill flex="100">
-        <div layout="column" layout-align="start" class="input-header">
-          <p>Descripción de las actividades que se planean realizar </p>
-          <p class="description">¿Qué vamos a hacer?</p>
-        </div>
-        <md-input-container>
-          <label>Descripción</label>
-          <textarea  ng-model="story.activityDescription" rows="4"></textarea>
-        </md-input-container>
-      </div>
-      <div layout="column" layout-fill flex="100">
-        <div layout="column" layout-align="start" class="input-header">
-          <p>Lista de quiénes estarían involucrados</p>
-          <p class="description">¿Quiénes participarán en lo que vamos a hacer?</p>
-        </div>
-        <md-input-container>
-          <label>Nombres</label>
-          <input type='text'  ng-model="story.namesList">
-        </md-input-container>
-      </div>
-      <div layout="column" layout-fill flex="100">
-        <div layout="column" layout-align="start" class="input-header">
-          <p>Fechas estimadas para la realización del proyecto</p>
-          <p class="description">¿Con qué etapas y en qué fechas vamos a realizar el proyecto de mejora?</p>
-        </div>
-        <md-input-container>
-          <label>Fecha estimada</label>
-          <input type='text'  ng-model="story.date">
-        </md-input-container>
-      </div>
-    </md-card>
-    <md-card layout-padding layout-wrap layout='row'>
-      <div layout="row" flex="100" layout-align="start center" class="input-header expand-input-header">
-        <span class="circle">
-          <span class="iconexito-antecedentes"></span>
-        </span>
-        <p>Organización</p>
-      </div>
-      <div layout="column" layout-fill flex="100">
-        <div layout="column" layout-align="start" class="input-header">
-          <p>Breve descripción de cómo se tomarán las decisiones</p>
-          <p class="description">¿Cómo vamos a ponernos de acuerdo? ¿Qué haremos si surge un imprevisto?</p>
-        </div>
-        <md-input-container>
-          <label>Descripción</label>
-          <textarea  ng-model="story.decisionDescription" rows="4"></textarea>
-        </md-input-container>
-      </div>
-      <div layout="column" layout-fill flex="100">
-        <div layout="column" layout-align="start" class="input-header">
-          <p>Evaluación de avance</p>
-          <p class="description">¿Cómo vamos a verificar si avanzamos como lo planeamos?</p>
-        </div>
-        <md-input-container>
-          <label>Descripción</label>
-          <input type='text'  ng-model="story.evaluation">
-        </md-input-container>
-      </div>
-      <div layout="column" layout-fill flex="100">
-        <div layout="column" layout-align="start" class="input-header">
-          <p>¿Cómo interactuarán con los maestros y directivos de la escuela?</p>
-          <p class="description">¿Cómo los vamos a informar? ¿Qué colaboración les vamos a pedir? ¿Cómo sabemos que están de acuerdo con lo que vamos haciendo y lo apoyan?</p>
-        </div>
-        <md-input-container>
-          <label>Descripción</label>
-          <textarea  ng-model="story.interaction" rows="4"></textarea>
-        </md-input-container>
-      </div>
-    </md-card>
-    <md-card layout-padding layout-wrap layout='row'>
-      <div layout="row" flex="100" layout-align="start center" class="input-header expand-input-header">
-        <span class="circle">
-          <span class="iconexito-antecedentes"></span>
-        </span>
-        <p>Firmas</p>
-      </div>
-      <div layout="column" layout-fill flex="100">
-        <div layout="column" layout-align="start" class="input-header">
-          <p>Por favor anexa una hoja escaneada con los nombres y firmas de los integrantes de la sociedad de padres, como aval de que la participación en este proyecto es aprobada por todos los padres de familia.</p>
-        </div>
-        <md-input-container>
-          <p class="warning">Sube el archivo desde tu computadora. El maximo es de 10MB</p>
-          <div ng-file-reader on-readed="onReaded( event, file )" read-method="readMethod" accept="image/*" ></div>
-          <p>{{file.name}}</p>
-          <p ng-if="file">tamaño:{{file.size | fileSize}}</p>
-        </md-input-container>
-      </div>
+
       <div layout-align="center center" layout="column" flex="100" class="send">
         <md-button ng-if='!saved' class="md-raised md-primary" type="submit">Enviar registro</md-button>
       </div>
     </md-card>
-    -->
 
   </form>
   <!-- end form -->
