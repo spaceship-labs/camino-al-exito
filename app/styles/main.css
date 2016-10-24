@@ -116,7 +116,7 @@ strong{font-weight:700;}
 transition: height .2s;
 }
 #header .menu a.principal:hover:after{height:100%}
-#header .menu a.logo{width:auto;margin:10px 4px 0 6px;padding:0;background-color:transparent;}
+#header .menu a.logo{width:auto;margin:10px 0px 0 0px;padding:0;background-color:transparent;}
 #header .menu a.logo:before{background-color:transparent;}
 #header .menu a.logo:hover{background-color:transparent;}
 #header .menu a.logo img{max-width: 90%}
@@ -258,3 +258,68 @@ ul.dropdown-menu{background: #fff;color: #868686;position: absolute;width: 100%;
 .autocomple_item p{color:red;}
 .autocomple_item a{color: #868686}
 .autocomple_item.active a{color: #fff}
+
+.password-error{color: red;}
+
+.login-space{
+  text-align: center;
+  margin: 12px 0 0;
+  padding: 3px 0;
+  overflow: hidden;
+  background-color: #17B9F2;
+  text-overflow: ellipsis;
+  font-weight: bold;
+  color: white;
+}
+
+.logout{
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+  font-size: 12px;
+}
+
+.login-button{
+  margin-top: 23px;
+}
+
+.login-button .logout{
+  background-color: #17B9F2 !important;
+  line-height: normal;
+  padding-top: 3px;
+}
+
+.login-button-main .logout{
+  line-height: normal;
+  padding-top: 3px;
+  margin: 10px;
+}
+
+.default-email{
+  color: black !important;
+}
+
+.add-register{
+  font-size: 25px;
+  color: #5BA1E6;
+  font-weight: bold;
+}
+
+.edit-register{
+  font-size: 20px;
+  color: #F6921A;
+  font-weight: bold;
+}
+
+.reg-item{
+  color: #5BA1E6;
+}
+
+.reg-item.selected{
+  font-style: italic;
+  font-weight: bold;
+}
+
+.reg-item.selected:before{
+  content: "*";
+}

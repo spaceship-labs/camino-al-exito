@@ -44,13 +44,39 @@
       <h1>Registra tu historia</h1>
       <p>Fecha limite de parte 1:</p>
       <p><strong>31 de Diciembre del 2015</strong></p>
-      <a class="down" ng-click="showForm = !showForm"></a>
+      <a class="down" ng-show="showFormMain" ng-click="showDataInForm = !showDataInForm"></a>
+      <div flex="10" ng-cloak ng-show="!showFormMain" class="login-button-main">
+        <md-button ng-click="doLogin()" class="md-raised logout" href="#/">Iniciar  <br> sesión</md-button>
+      </div>
     </div>
   </div>
 </div>
 <div class="container inputs">
-  <a id="registro"></a>
-  <form ng-if='!saved &amp;&amp; !saving &amp;&amp; showForm' ng-submit="save(selectedSchool)">
+  <div class="dump-content" ng-show="userLogin.email">
+
+    <a id="registro"></a>
+    <div ng-show="showDataInForm && !saving">
+      <a class="edit-register">Editar existente:</a>
+      <md-progress-circular md-mode="indeterminate" ng-show="loadingList"></md-progress-circular>
+
+      <ul>
+        <li ng-repeat="reg in registerList">
+          <a ng-class="['reg-item', reg.$id == story.$id?'selected':'']" href="#/" ng-click="edit(reg)"> {{reg.cct}} | {{reg.projectName}}</a>
+        </li>
+      </ul>
+    <p ng-show="!hasRegisters">Aún no tienes historias guardadas</p>
+    </div>
+
+    <br>
+
+    <div flex="10" ng-cloak ng-show="showDataInForm && !saving" class="login-button-main">
+      <md-button ng-click="newReg(); showForm = true" class="md-raised logout" href="#/">Nuevo registro</md-button>
+    </div>
+
+
+  </div>
+
+  <form ng-if='!saved &amp;&amp; !saving &amp;&amp; showForm' ng-submit="save(selectedSchool)" ng-show="userLogin.email">
     <md-card layout-padding layout-wrap layout='row'>
       <div layout="row" flex="100" layout-align="start center" class="input-header expand-input-header">
         <span class="circle">
@@ -64,7 +90,7 @@
         <div layout="row" layout-align="start center" class="input-header">
           <p>Nombre de tu escuela</p>
         </div>
-        <md-autocomplete required md-input-name="autocompleteField" md-input-minlength="2" md-search-text="searchText" md-items="item in getSchools(searchText)" md-selected-item='selectedSchool' md-selected-item-change='selectSchool(selectedSchool)' md-item-text="item.nombre+', '+item.nom_municipio" md-floating-label="Nombre de la escuela" ng-model='story.school'>
+        <md-autocomplete md-input-id="auto-search-complete" required md-input-name="autocompleteField" md-input-minlength="0" md-search-text="searchText" md-items="item in getSchools(searchText)" md-selected-item='selectedSchool' md-selected-item-change='selectSchool(selectedSchool)' md-item-text="item.nombre+', '+item.nom_municipio" md-floating-label="Nombre de la escuela" ng-model='story.school'>
           <md-item-template>
             <!-- <span md-highlight-text="searchText">{{item.nombre}}, {{item.nom_municipio}}</span>-->
             <a tabindex="-1" class="autocomple_item">
@@ -172,7 +198,7 @@
         </div>
         <md-input-container>
           <label>E-Mail</label>
-          <input type='email'  ng-model="story.email" ng-change="check()" required>
+          <input class="default-email" type='email'  ng-model="story.email" ng-change="check()" ng-init="story.email = userLogin.email" disabled>
         </md-input-container>
       </div>
 
@@ -279,7 +305,7 @@
   </md-card>
   <div layout="row" layout-fill layout-align="space-around center" class="logos">
     <img src="images/fundacion.png">
-    <img src="images/1noticias.png">
+    <img src="images/sep.jpg">
     <img src="images/logo_mejora.png">
   </div>
 </div>

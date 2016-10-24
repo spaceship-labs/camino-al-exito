@@ -1,4 +1,3 @@
-/* globals Firebase */
 'use strict';
 
 /**
@@ -9,9 +8,11 @@
  * Controller of the caminoAlExitoApp
  */
 angular.module('caminoAlExitoApp')
-  .controller('HomeCtrl', function($scope, $firebaseArray, $http, $mdDialog, $location, $anchorScroll) {
-    var firebaseEntries = new Firebase('https://educaccion-d635e.firebaseio.com/').child('entries'); //
-    console.log('new firebase...');
+  .controller('HomeCtrl', function($scope, $firebaseArray, $http, $mdDialog, $location, $anchorScroll, login) {
+    //var firebaseEntries = new Firebase('https://educaccion-d635e.firebaseio.com/').child('entries'); //
+    var ref = firebase.database().ref().child('entries');
+    var firebaseEntries = $firebaseArray(ref);
+
     /*$scope.stories = $firebaseArray(ref);
 
     $scope.stories.$loaded(function(data){
@@ -23,6 +24,7 @@ angular.module('caminoAlExitoApp')
     $scope.saved = false;
     $scope.saving = false;
     $scope.readMethod = "readAsDataURL";
+
 
     $scope.onReaded = function(e, file) {
       var files = $scope.story.files || [];
@@ -106,13 +108,26 @@ angular.module('caminoAlExitoApp')
 
       $scope.story.school = selectedSchool && selectedSchool.nombre || $scope.name_school;
       $scope.saving = true;
-      firebaseEntries.push().set(angular.copy($scope.story), function(e) {
+
+      if ($scope.story && $scope.story.$id && $scope.registerList) {
+        $scope.registerList.$save($scope.story).then(function() {
+          $scope.saving = false;
+          $scope.saved = true;
+        });
+        return ;
+      }
+
+      firebaseEntries.$add(angular.copy($scope.story)).then(function(obj) {
         $scope.saving = false;
-        $scope.saved = !e ? true : false;
-        $scope.$apply();
-        if(!e){
+        if(obj.key){
+          $scope.saved = true;
           toggleSchoolMTE($scope.story.cct, $scope.story.email);
+        } else {
+          $scope.saved = false;
         }
+      }).catch(function() {
+        $scope.saving = false;
+        $scope.saved = false;
       });
     };
 
@@ -124,7 +139,8 @@ angular.module('caminoAlExitoApp')
     function toggleSchoolMTE(cct, email){
       $http({
         method: 'GET',
-        url: 'http://mte.spaceshiplabs.com/api/suscribeEducacion',
+        //url: 'http://mte.spaceshiplabs.com/api/suscribeEducacion',
+        url: 'http://comparatuescuela/api/suscribeEducacion',
         params: {
           cct: cct,
           email: email,
@@ -147,6 +163,73 @@ angular.module('caminoAlExitoApp')
         .content('Los archivos de evidencias son necesarios')
         .ok('Ok')
       );
+    }
+
+    var userLogin = login.getUser();
+
+    if (userLogin) {
+      $scope.showFormMain = true;
+    }
+
+    login.changeAuth(function(user) {
+      if (user && user.email) {
+        $scope.userLogin = user;
+        $scope.showFormMain = true;
+        loadRegisters(user.email);
+      } else {
+        $scope.userLogin = null;
+        $scope.showFormMain = false;
+        $scope.registerList = [];
+      }
+    });
+
+    $scope.doLogin = login.showForm;
+
+    function loadRegisters(email) {
+      $scope.hasRegisters = true;
+      $scope.loadingList = true;
+      var query = ref.orderByChild("email").equalTo(email);
+      var list = $firebaseArray(query);
+      $scope.registerList = list;
+      list.$loaded().then(function(l) {
+        $scope.loadingList = false;
+        if (l.length) {
+          $scope.hasRegisters = true;
+        } else {
+          $scope.hasRegisters = false;
+        }
+      });
+    }
+
+    $scope.edit = function(reg) {
+      $scope.story = reg;
+      $scope.saved = false;
+      restoreAutocomplete(reg.school);
+      $scope.selectedSchool = {
+        nombre: reg.school,
+        cct: reg.cct
+      };
+      $scope.showForm = true;
+    };
+
+    $scope.newReg = function() {
+      $scope.selectedSchool = null;
+      $scope.searchText = '';
+      $scope.story = {email: $scope.userLogin.email};
+      $scope.saved = false;
+      $scope.showFormMain = true;
+      $scope.showForm = true;
+      restoreAutocomplete();
+    };
+
+
+    //fuck
+    function restoreAutocomplete(value) {
+      value = value || '';
+      var auto = window.document.querySelector('#auto-search-complete');
+      if (auto) {
+        auto.value = value;
+      }
     }
 
   });
