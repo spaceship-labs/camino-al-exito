@@ -139,8 +139,8 @@ angular.module('caminoAlExitoApp')
     function toggleSchoolMTE(cct, email){
       $http({
         method: 'GET',
-        //url: 'http://mte.spaceshiplabs.com/api/suscribeEducacion',
-        url: 'http://comparatuescuela/api/suscribeEducacion',
+        url: 'http://mte.spaceshiplabs.com/api/suscribeEducacion',
+        //url: 'http://comparatuescuela/api/suscribeEducacion',
         params: {
           cct: cct,
           email: email,
