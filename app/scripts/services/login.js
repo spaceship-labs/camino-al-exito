@@ -81,7 +81,20 @@ angular.module('caminoAlExitoApp')
         authObj.$signInWithEmailAndPassword(user.email, user.password).then(function(user) {
           console.log('login', user);
           $mdDialog.hide();
-        }).catch(function() {
+        }).catch(function(error) {
+          console.log('err', error);
+          var msg;
+          if (error.code === 'auth/user-not-found') {
+            msg = 'Usuario no encontrado';
+          } else if(error.code === 'auth/wrong-password') {
+            msg = 'Contraseña incorrecta';
+          }
+          if (!msg) {
+            msg = error.message;
+          }
+
+          showAlert(msg);
+
         });
       };
     }
@@ -123,7 +136,6 @@ angular.module('caminoAlExitoApp')
 
       $mdDialog
         .show(alert);
-
     }
 
     //self.restorePassword('aero.uriel@gmail.com');
