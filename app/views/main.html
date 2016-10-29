@@ -39,16 +39,17 @@
     </div>
   </div>
   <div class="register info" layout="row">
-    <div layout="column" layout-align="center center" flex="60">
+    <a href="https://goo.gl/forms/0TZwpMTGe0XP8dcX2" layout="column" layout-align="center center" flex="60">
       <span class="iconexito-registro"></span>
       <h1>Registra tu historia</h1>
-      <p>Fecha limite de parte 1:</p>
-      <p><strong>31 de Diciembre del 2015</strong></p>
+      <p>Una vez terminado el registro, mándanos tus fotos y vídeos al correo educaccion@mejoratuescuela.org.</p>
       <a class="down" ng-show="showFormMain" ng-click="showDataInForm = !showDataInForm"></a>
+      <!--
       <div flex="10" ng-cloak ng-show="!showFormMain" class="login-button-main">
         <md-button ng-click="doLogin()" class="md-raised logout" href="#/">Iniciar  <br> sesión</md-button>
       </div>
-    </div>
+      -->
+    </a>
     <a class="winner-link" href="#/ganadoras" flex>
       <div class="ribbon"></div>
       <h2>CONOCE LAS HISTORIAS DE LAS 10 ESCUELAS GANADORAS</h2>
@@ -286,15 +287,16 @@
     <p>Tu registro ya se envió</p>
   </md-card>
 
-  <md-card layout-padding layout-wrap layout='row' ng-if="showForm">
+  <md-card layout-padding layout-wrap layout='row' >
     <div layout="column" flex="100" layout-align="start center" class="input-header expand-input-header text-center">
+      <!--
       <p>*A partir del 1ero de enero de 2016 te pediremos que nos compartas, a través de esta plataforma, tus experiencias y evidencias de lo que lograron.
         <br>
         <br>
         Los mejores proyectos serán premiados y recibirán apoyos complementarios por Fundación Televisa y Primero Noticias.
         <br>
       </p>
-
+      -->
       <p class="blue">
         <br>
         ¿Tienes preguntas?
@@ -309,7 +311,6 @@
   </md-card>
   <div layout="row" layout-fill layout-align="space-around center" class="logos">
     <img src="images/fundacion.png">
-    <img src="images/sep_sm.png">
     <img src="images/logo_mejora.png">
   </div>
 </div>
