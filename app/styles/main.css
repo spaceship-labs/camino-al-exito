@@ -368,7 +368,7 @@ ul.dropdown-menu{background: #fff;color: #868686;position: absolute;width: 100%;
 #main-content.main-winners .schools .video-container a.video-icon{margin-left: 20px; background-color: #2FC45C; color:white;}
 #main-content.main-winners .schools .video-container a.video-icon i{font-style: normal;}
 
-.winner-link{background-color: #20B45E;}
+.winner-link{background-color: #20B45E;padding-bottom:40px;}
 .winner-link .ribbon{background:url(../images/ganadoras_blue.png) no-repeat;}
 .winner-link h2{font-size:25px; line-height:normal; font-weight:700; color:white; text-align: center;}
 
