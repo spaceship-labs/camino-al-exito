@@ -38,19 +38,33 @@
       <div class="child-pic"></div>
     </div>
   </div>
-  <div class="register info" layout="row">
-    <a href="https://goo.gl/forms/0TZwpMTGe0XP8dcX2" layout="column" layout-align="center center" flex="60">
-      <span class="iconexito-registro"></span>
-      <h1>Da clic aquí y registra tu historia</h1>
-      <p>Una vez terminado el registro, mándanos tus fotos y vídeos al correo educaccion@mejoratuescuela.org.</p>
-      <a class="down" ng-show="showFormMain" ng-click="showDataInForm = !showDataInForm"></a>
-      <!--
-      <div flex="10" ng-cloak ng-show="!showFormMain" class="login-button-main">
-        <md-button ng-click="doLogin()" class="md-raised logout" href="#/">Iniciar  <br> sesión</md-button>
-      </div>
-      -->
+  <div class="register info" layout="row" layout-wrap>
+    <a 
+      class="register-item"
+      href="https://goo.gl/forms/0TZwpMTGe0XP8dcX2" 
+      layout="row" 
+      layout-align="center center" 
+      flex="60"
+      flex-sm="100"
+    >
+      <span>
+        <span class="iconexito-registro"></span>
+        <h1>Da clic aquí y registra tu historia</h1>
+        <p>Una vez terminado el registro, mándanos tus fotos y vídeos al correo educaccion@mejoratuescuela.org.</p>
+        <a class="down" ng-show="showFormMain" ng-click="showDataInForm = !showDataInForm"></a>
+        <!--
+        <div flex="10" ng-cloak ng-show="!showFormMain" class="login-button-main">
+          <md-button ng-click="doLogin()" class="md-raised logout" href="#/">Iniciar  <br> sesión</md-button>
+        </div>
+        -->
+      </span>
     </a>
-    <a class="winner-link" href="#/ganadoras" flex>
+    <a 
+      class="winner-link regiter-item" 
+      href="#/ganadoras" 
+      flex
+      flex-sm="100"
+    >
       <div class="ribbon"></div>
       <h2>CONOCE LAS 10 ESCUELAS GANADORAS DE LA CONVOCATORIA 2015-2016</h2>
     </a>
