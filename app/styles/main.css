@@ -135,7 +135,9 @@ transition: height .2s;
 
 @media (max-width: 600px){
 	/*General*/
-	[flex-sm="100"]{max-width: none!important;-webkit-flex: 1!important; -ms-flex: 1!important; flex: 1!important;}
+	/*
+  [flex-sm="100"]{max-width: none!important;-webkit-flex: 1!important; -ms-flex: 1!important; flex: 1!important;}
+  */
 
 	/*Header*/
 	#header .menu #button-menu-mobile{display: block;}
