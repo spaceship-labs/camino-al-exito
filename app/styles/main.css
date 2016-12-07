@@ -252,9 +252,13 @@ transition: height .2s;
 #footer.bottom-e404 .container.e404 .link a{color: #fff}
 #footer.bottom-e404 .container.e404 .link i{font-size: 28px}
 @media(max-width: 960px){
-	#content{padding: 0 12px}
+	/*#content{padding: 0 12px}
 	#footer{padding: 10px 12px}
+  */
   #camino .quote p{width: 100%;}
+  #home .step, #home .angle-icon{min-height: 0 !important;}
+  #header .header-main img{max-width: 300px;}
+  #header{background-position: 66% top !important;}
 }
 
 /*Auto-complete*/
@@ -381,7 +385,7 @@ ul.dropdown-menu{background: #fff;color: #868686;position: absolute;width: 100%;
 .winner-link h2{font-size:25px; line-height:normal; font-weight:700; color:white; text-align: center;}
 
 /*redesign*/
-#header{background: url(../images/nino_big.jpg) no-repeat; background-size: cover;}
+#header{background: url(../images/nino_big.jpg) no-repeat center center; background-size: cover;}
 #header .header-owners{background-color: rgba(255, 255, 255, .6)}
 #header .header-owners .own1{padding: 13px 30px;}
 #header .header-owners .own2{padding: 15px 18px;}
@@ -395,9 +399,8 @@ ul.dropdown-menu{background: #fff;color: #868686;position: absolute;width: 100%;
 #home .steps{padding: 14px 0;}
 #home .step p{text-align: center; padding: 11px 0 0; font-size: 13px; font-weight: bold; color: #2671B7;}
 #home .step, #home .angle-icon{min-height: 200px;}
-#home .steps .fa-angle-right{color: #2873B7;}
-#home .angle-icon{padding: 8px;}
-#home .angle-icon i{font-size: 8em;}
+#home .steps .fa-angle-right{}
+#home .angle-icon i{font-size: 8em;color: #2873B7;}
 
 #home .orange{background-color: #F5913B;}
 #home .links a{color: white; font-weight: bold; border: 2px solid white; margin: 68px 10px 40px; padding: 7px 0; width: 437px; font-size: 19px; text-align: center;}
@@ -405,7 +408,7 @@ ul.dropdown-menu{background: #fff;color: #868686;position: absolute;width: 100%;
 #home .orange p span{font-weight: 100;}
 
 #home .cups .know{background-color: #2771B8; padding: 76px 0;}
-#home .cups .winners{border: 2px solid white; font-size: 17px; font-weight: bold; text-align: center; width: 435px; margin-top: 24px; padding: 9px 0; color: white;}
+#home .cups .winners{border: 2px solid white; font-size: 17px; font-weight: bold; text-align: center;margin-top: 24px; padding: 9px 31px; color: white;}
 #home .cups .know p{font-size: 17px; font-weight: bold; padding: 15px 0; color: white;}
 
 #home .info .title{text-align: center; font-size: 27px; font-weight: bold; padding: 42px 0 0; color: #F5913B;}
