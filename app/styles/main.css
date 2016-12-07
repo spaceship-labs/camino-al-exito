@@ -403,3 +403,19 @@ ul.dropdown-menu{background: #fff;color: #868686;position: absolute;width: 100%;
 #home .links a{color: white; font-weight: bold; border: 2px solid white; margin: 68px 10px 40px; padding: 7px 0; width: 437px; font-size: 19px; text-align: center;}
 #home .orange p{text-align: center; font-size: 17px; font-weight: bold; color: white; padding: 0 0 41px;}
 #home .orange p span{font-weight: 100;}
+
+#home .cups .know{background-color: #2771B8; padding: 76px 0;}
+#home .cups .winners{border: 2px solid white; font-size: 17px; font-weight: bold; text-align: center; width: 435px; margin-top: 24px; padding: 9px 0; color: white;}
+#home .cups .know p{font-size: 17px; font-weight: bold; padding: 15px 0; color: white;}
+
+#home .info .title{text-align: center; font-size: 27px; font-weight: bold; padding: 42px 0 0; color: #F5913B;}
+#home .info .steps{padding: 24px 0 0;}
+#home .info .steps .step{padding: 0 22px;}
+#home .info{padding-bottom: 19px;}
+
+#footer{background-color: #2771B8;}
+#footer .contact-info{font-size: 16px; font-weight: bold;}
+#footer .contact{padding: 17px 0;}
+#footer .contact .co-other{font-size: 12px; color: white; font-weight: bold; text-align: left;}
+#footer .contact .co-other span{font-weight: 100;}
+#footer .contact-text{padding-left: 25px;}
