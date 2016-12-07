@@ -38,6 +38,11 @@ angular
         controller: 'GanadorasCtrl',
         controllerAs: 'ganadoras'
       })
+      .when('/home2017', {
+        templateUrl: 'views/home2017.html',
+        controller: 'Home2017Ctrl',
+        controllerAs: 'home2017'
+      })
       .otherwise({
         redirectTo: '/'
       });

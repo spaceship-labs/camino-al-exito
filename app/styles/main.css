@@ -380,3 +380,12 @@ ul.dropdown-menu{background: #fff;color: #868686;position: absolute;width: 100%;
 .winner-link .ribbon{background:url(../images/ganadoras_blue.png) no-repeat;}
 .winner-link h2{font-size:25px; line-height:normal; font-weight:700; color:white; text-align: center;}
 
+/*redesign*/
+#header{background: url(../images/nino_big.jpg) no-repeat; background-size: cover;}
+#header .header-owners{background-color: rgba(255, 255, 255, .6)}
+#header .header-owners .own1{padding: 13px 30px;}
+#header .header-owners .own2{padding: 15px 18px;}
+#header .header-main img{padding: 65px 0;}
+#header .header-content{background-color: rgba(32, 125, 216, .9); text-align: center;}
+#header .header-content h1{font-size: 27px; padding: 59px 0 0; color: white; font-weight: bold;}
+#header .header-content h2{font-size: 16px; font-weight: bold; color: white;}
