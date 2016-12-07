@@ -388,4 +388,18 @@ ul.dropdown-menu{background: #fff;color: #868686;position: absolute;width: 100%;
 #header .header-main img{padding: 65px 0;}
 #header .header-content{background-color: rgba(32, 125, 216, .9); text-align: center;}
 #header .header-content h1{font-size: 27px; padding: 59px 0 0; color: white; font-weight: bold;}
-#header .header-content h2{font-size: 16px; font-weight: bold; color: white;}
+#header .header-content h2{font-size: 16px; font-weight: bold; color: white; padding: 0 0 51px;}
+
+/*home*/
+#home h3{font-size: 26px;text-align: center; color: #F5913B; font-weight: bold; padding: 23px 0;}
+#home .steps{padding: 14px 0;}
+#home .step p{text-align: center; padding: 11px 0 0; font-size: 13px; font-weight: bold; color: #2671B7;}
+#home .step, #home .angle-icon{min-height: 200px;}
+#home .steps .fa-angle-right{color: #2873B7;}
+#home .angle-icon{padding: 8px;}
+#home .angle-icon i{font-size: 8em;}
+
+#home .orange{background-color: #F5913B;}
+#home .links a{color: white; font-weight: bold; border: 2px solid white; margin: 68px 10px 40px; padding: 7px 0; width: 437px; font-size: 19px; text-align: center;}
+#home .orange p{text-align: center; font-size: 17px; font-weight: bold; color: white; padding: 0 0 41px;}
+#home .orange p span{font-weight: 100;}
