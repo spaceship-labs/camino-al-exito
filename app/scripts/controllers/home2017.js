@@ -115,7 +115,7 @@ angular.module('caminoAlExitoApp')
 
                             "</a>"+
                             winner +
-                            "<div class='address-popup'><p >Participa en "+count_participa+" escuelas</p><a href='http://comparatuescuela/programas/index/45/#/?state="+state.id+"&name="+state.nombre.toLowerCase()+"'>Ver lista de escuelas</a></div>"+
+                            "<div class='address-popup'><p >Participa en "+count_participa+" escuelas</p><a href='http://mejoratuescuela.org/programas/index/45/#/?state="+state.id+"&name="+state.nombre.toLowerCase()+"'>Ver lista de escuelas</a></div>"+
                             ""+
                             "</div>";
             return mark;
