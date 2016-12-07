@@ -16,7 +16,8 @@ angular
     'ngTouch',
     'ngMaterial',
     'firebase',
-    'ngFileReader'
+    'ngFileReader',
+    'leaflet-directive'
   ])
   .config(function($routeProvider) {
     //$locationProvider.html5Mode(true);

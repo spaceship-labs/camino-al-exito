@@ -259,6 +259,7 @@ transition: height .2s;
   #home .step, #home .angle-icon{min-height: 0 !important;}
   #header .header-main img{max-width: 300px;}
   #header{background-position: 66% top !important;}
+
 }
 
 /*Auto-complete*/
@@ -422,3 +423,5 @@ ul.dropdown-menu{background: #fff;color: #868686;position: absolute;width: 100%;
 #footer .contact .co-other{font-size: 12px; color: white; font-weight: bold; text-align: left;}
 #footer .contact .co-other span{font-weight: 100;}
 #footer .contact-text{padding-left: 25px;}
+
+#map {width: 100% !important;}
