@@ -338,13 +338,13 @@ ul.dropdown-menu{background: #fff;color: #868686;position: absolute;width: 100%;
 }
 
 /*ganadoras*/
-#winners h1{text-align:center;font-size:35px; line-height:normal; color:white;text-transform: uppercase;}
-#winners h2{text-align:center;font-size:35px; line-height:normal; color:white;text-transform: uppercase;font-weight: bold}
-#winners h3{text-align:center;font-size:20px; line-height:30px; color:white;text-transform: uppercase;}
+#winners h1{text-align:center;font-size:35px; line-height:normal; color:#0070C0;}
+#winners h2{text-align:center;font-size:35px; line-height:normal; color:#0070C0;font-weight: bold}
+#winners h3{text-align:center;font-size:20px; line-height:30px; color:#0070C0;}
 .ribbon{margin:20px auto;background:url(../images/ganadoras.png) no-repeat;width:76px;height:113px;}
-#winners .intro{background:#F6921A;position: relative;}
+#winners .intro{position: relative;}
 #winners .left, #winners .left a{color:white;}
-#winners .right{overflow:hidden;min-height: 450px;background: #256EBD;padding-top: 20px}
+#winners .right{overflow:hidden;min-height: 260px;}
 #winners .register.info{background:#F6921A;}
 #winners .tmp{margin-top:240px;}
 #winners .sub{font-size: 1.5em;margin: 0;}
@@ -352,6 +352,7 @@ ul.dropdown-menu{background: #fff;color: #868686;position: absolute;width: 100%;
 #winners .sub span:last-of-type{font-size: 1.3em;font-weight: bold;}
 #winners .logo-educacion{background-color: white;border-radius: 50%;height: 208px;width: 208px;z-index: 10;background-image: url(../images/logo.png);}
 #winners .logo-educacion .triangle{background-color: white;height: 50px;left: -10px;position: absolute;top: 75px;transform: rotate(45deg);width: 50px;}
+#winners .img-fix{margin-top: 30px;}
 
 #winners .left p{line-height:normal;font-size: 1.2em;}
 #winners .left .question{font-size:1.2em; font-weight:200;}

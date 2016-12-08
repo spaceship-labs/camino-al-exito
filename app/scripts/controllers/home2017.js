@@ -22,6 +22,10 @@ angular.module('caminoAlExitoApp')
         }
     };
 
+    $scope.options = {
+      scrollWheelZoom: false
+    };
+
 
     $scope.stateByYears = {};
 
@@ -72,18 +76,18 @@ angular.module('caminoAlExitoApp')
                 count_participa = state.count_participa;
 
             if (state.count_participa && state.count_participa.pop) {
-                $scope.stateByYears['multiple'] = true;
-                selectYear = '<select class="select-year" ng-change="changeYear(selectYear'+state.id+')" ng-model="selectYear'+state.id+'">'
+                $scope.stateByYears.multiple = true;
+                selectYear = '<select class="select-year" ng-change="changeYear(selectYear'+state.id+')" ng-model="selectYear'+state.id+'">';
                 selectYear += state.count_participa
                 .filter(function(data) {
-                    return data._id != 0 && data._id != "";
+                    return data._id !== 0 && data._id !== "";
                 })
                 .map(function(data) {
                     var scopeName = 'selectYear' + state.id,
                         selected = '';
                     if (!$scope.stateByYears[scopeName]) {
                         $scope.stateByYears[scopeName] = {};
-                        selected = 'ng-selected="true"'
+                        selected = 'ng-selected="true"';
                         $scope[scopeName] = data._id;
                     }
                     $scope.stateByYears[scopeName][data._id] = data.count;
@@ -92,7 +96,7 @@ angular.module('caminoAlExitoApp')
                         showText = "Ciclo escolar: " + showText + "-" + (showText + 1);
                         $scope.ciclos['year_' + data._id] = showText;
                     }
-                    return '<option value="'+ data._id +'" '+selected+'>'+ showText +'</option>'
+                    return '<option value="'+ data._id +'" '+selected+'>'+ showText +'</option>';
                 })
                 .join('');
                 selectYear += '</select>';
@@ -101,7 +105,7 @@ angular.module('caminoAlExitoApp')
 
 
 
-            var winner = ""
+            var winner = "";
 
             if (state.count_per_link) {
                 winner += "<a class='name winner'> - "+ state.count_per_link +" escuelas ganadoras</a>";
@@ -121,7 +125,7 @@ angular.module('caminoAlExitoApp')
             return mark;
         });
 
-        $scope.changeYear = function(year) {
+        $scope.changeYear = function() {
             $scope.skip = 0;
             $scope.currentState.id = '';
             $scope.currentState.name = '';
@@ -134,9 +138,6 @@ angular.module('caminoAlExitoApp')
                 lat : 22.1564699,
                 lng : -100.9855409,
                 zoom: 5
-            },
-            dafaults:{
-                scrollWheelZoom: false
             },
             markers:markers.filter(function(e){
                 return e;
