@@ -28,7 +28,7 @@ angular
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
-      .when('/', {
+      .when('/home2016', {
         //templateUrl: 'views/update.html',
         templateUrl: 'views/main.html',
         controller: 'HomeCtrl',
@@ -39,7 +39,7 @@ angular
         controller: 'GanadorasCtrl',
         controllerAs: 'ganadoras'
       })
-      .when('/home2017', {
+      .when('/', {
         templateUrl: 'views/home2017.html',
         controller: 'Home2017Ctrl',
         controllerAs: 'home2017'
