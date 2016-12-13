@@ -358,6 +358,7 @@ ul.dropdown-menu{background: #fff;color: #868686;position: absolute;width: 100%;
 #winners .left .question{font-size:1.2em; font-weight:200;}
 #winners .left .share{font-size:1.3em; font-weight:200;}
 #winners .left .cuenta{font-size:3em;}
+#winners .winners-cup{max-width: 140px;}
 
 #main-content.main-winners {padding:40px 0;text-align:center;}
 #main-content.main-winners h1{color:#F79301;text-align:center;font-size:35px;font-weight:bold;line-height: normal}
@@ -426,3 +427,4 @@ ul.dropdown-menu{background: #fff;color: #868686;position: absolute;width: 100%;
 #footer .contact-text{padding-left: 25px;}
 
 #map {width: 100% !important;}
+
