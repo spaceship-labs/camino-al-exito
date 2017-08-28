@@ -1,6 +1,6 @@
 <ng-include src="'views/header2017.html'"></ng-include>
 <div id="home">
-  <h3>¿Que hay que hacer?</h3>
+  <h3>¿Qué hay que hacer?</h3>
   <div class="steps" layout="column" layout-align="center center" layout-fill layout-gt-md="row">
 
     <div class="step" layout="column" layout-align="start center">
@@ -47,6 +47,14 @@
     </div>
   </div>
   <div class="orange">
+    <h3 class="thanks">¡Gracias por participar!</h3>
+    <p class="show-schools">Conoce la lista de escuelas ganadoras</p>
+    <div layout="row" layout-align="center center">
+      <p flex="25">
+        <a class="win-school" href="#!/ganadoras"> CONVOCATORIA 2015-2016</a>
+      </p>
+    </div>
+    <!--
     <div class="links" layout="row" layout-align="center center">
       <a target="_blank" href="http://05d2b6dc746bc95f8eae-ee795f94e3237cba6784ea0eca51d07d.r53.cf1.rackcdn.com/BasesConvocatoria_PapasYMamasEnEducAccion.pdf">BASES DE LA CONVOCATORIA</a>
       <a href="https://goo.gl/forms/0TZwpMTGe0XP8dcX2">REGISTRA TU PROYECTO EN LÍNEA</a>
@@ -56,22 +64,18 @@
     (fotos, videos y documentos) al correo:
     <br>
     <span>educaccion@mejoratuescuela.org</span></p>
+    -->
 
   </div>
 
   <div class="cups" layout="column" layout-gt-md="row">
-    <div class="know" flex="50" layout="column" layout-align="center center">
-      <img src="images/trofeo_2.png" alt="">
-      <a class="winners" href="#!/ganadoras"> CONOCE A LAS ESCUELAS GANADORAS</a>
-      <p>De la convocatoria 2015-2016</p>
-    </div>
-    <leaflet lf-center="center" markers="markers" defaults="options" id="map"  height="480px" width="640px" flex="50"></leaflet>
+    <leaflet lf-center="center" markers="markers" defaults="options" id="map"  height="480px" width="640px" flex="100"></leaflet>
   </div>
 
   <div class="info">
-    <p class="title">¡Más de 500 escuelas participantes de todo el país,
+    <p class="title">¡Más de 600 escuelas participantes
     <br>
-    en tres categorías y 10 ganadores!</p>
+    y 10 ganadores cada año!</p>
 
     <div class="steps" layout="column" layout-align="center center"  layout-gt-md="row">
       <div class="step" layout="column" layout-align="start center">
