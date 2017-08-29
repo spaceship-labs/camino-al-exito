@@ -31,25 +31,36 @@ angular.module('caminoAlExitoApp')
         cct.message = cct.nombre;
         exists[cct.entidad] = true;
         cct.icon ={
-          iconUrl:'images/pin.png',
+          iconUrl:'images/' + cct.p +'.png',
           iconSize:[30, 45],
         };
-        if (cct.ganadora) {
-          cct.icon.iconUrl = "images/pinganador.png";
-        }
         return cct;
-      }]
+      }];
 
+    }
+
+    function setP(p) {
+      return function(cct) {
+        cct.p = p;
+        return cct;
+      };
     }
 
     function loadMarkers(data) {
       var process = processMarkers();
-      var exists = process[0];
-      //var markers = data['2015-2016'].map(process[1]);
-      var markers = data['2016-2017'].map(process[1]);
+      //var exists = process[0];
+      var p1516 = data['2015-2016'].map(setP('2015-2016'));
+      var p1617 = data['2016-2017'].map(setP('2016-2017'));
+
+      p1516 = p1516.filter(function(cct) {
+        return cct.ganadora;
+      });
+      var markers = p1516.map(process[1]);
+      markers = markers.concat(p1617.map(process[1]));
 
       $scope.ccts = markers;
 
+      /*
       var staticCoords = [
         {"lat" : 0, "lng" : 0},
         {"lat" : 21.8852562, "lng" : -102.2915677}, //Aguascalientes
@@ -90,6 +101,7 @@ angular.module('caminoAlExitoApp')
       }).filter(function(state, index) {
         return exists[index];
       });
+      */
 
       angular.extend($scope,{
         center:{
@@ -97,7 +109,7 @@ angular.module('caminoAlExitoApp')
           lng : mainLng,
           zoom: 5
         },
-        markers:staticCoords.filter(function(e){
+        markers:markers.filter(function(e){
           return e;
         }),
       });
@@ -107,6 +119,7 @@ angular.module('caminoAlExitoApp')
     }
 
 
+    /*
     $scope.$on('leafletDirectiveMarker.map.click', function(event, args) {
       if (args && args.model && args.model.entidad && !args.model.nombre) {
         if (args.model.show) {
@@ -136,6 +149,7 @@ angular.module('caminoAlExitoApp')
       }
 
     });
+    */
 
     $http.get('/educaccion.json').then(function(res){
       loadMarkers(res.data);
