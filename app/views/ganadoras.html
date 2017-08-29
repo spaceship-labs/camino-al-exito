@@ -28,9 +28,9 @@
   <div class="arrow"></div>
 
   <div class="schools" layout='column' layout-sm="column" layout-align="center" flex="70" ng-show="date==='2016-2017'">
-    <p layout='row' layout-sm='column' flex-sm="100" ng-repeat="school in schools">
-      <a ng-href="http://mejoratuescuela.org/escuelas/index/{{school[0].cct}}" target="_self" flex>{{school[0].name}}<i>{{school[0].geo}}</i></a>
-      <a ng-href="http://mejoratuescuela.org/escuelas/index/{{school[1].cct}}" target="_self" flex>{{school[1].name}}<i>{{school[1].geo}}</i></a>
+    <p layout='row' layout-sm='column' flex-sm="100" ng-repeat="(key,school) in schools">
+      <a ng-href="/images/fichas2/{{key*2+1}}.png" target="_self" flex>{{school[0].name}}<i>{{school[0].geo}}</i></a>
+      <a ng-href="/images/fichas2/{{key*2+2}}.png" target="_self" flex>{{school[1].name}}<i>{{school[1].geo}}</i></a>
     </p>
   </div>
 
