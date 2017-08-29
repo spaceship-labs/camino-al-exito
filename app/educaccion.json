@@ -1,4 +1,5 @@
-[
+{
+  "2015-2016": [
  {
    "n": 1,
    "cct": "02DST0046B",
@@ -1409,4 +1410,74 @@
    "lng": -102.042063,
    "entidad": 32
  }
-]
+ ],
+ "2016-2017": [
+  {
+    "cct": "14EPR0451B",
+    "lat": 20.68624321404,
+    "lng": -103.318513942897,
+    "nombre": "Escuela Primaria Francisco Márquez",
+    "entidad": 14,
+    "ganadora": true
+  },  {
+    "cct": "10DPR0585W",
+    "nombre": "Escuela Primaria Benito Juárez'",
+    "lat": 25.9819201627033,
+    "lng": -105.203991549276,
+    "entidad": 10,
+    "ganadora": true
+  },  {
+    "cct": "15EES0569S",
+    "nombre": "Escuela Secundaria Ofic. No. 0439 Aquiles Serdán'",
+    "lat": 19.6054239985403,
+    "lng": -99.0008361010438,
+    "entidad": 15,
+    "ganadora": true
+  },  {
+    "cct": "24DST0072L",
+    "lat": 22.1724893533054,
+    "lng": -101.013192094463,
+    "nombre": "Escuela Secundaria Técnica No. 65",
+    "entidad": 24,
+    "ganadora": true
+  },  {
+    "cct": "31EES0080K",
+    "lat": 21.0333099749843,
+    "lng": -89.752243563694,
+    "nombre": "Escuela Secundaria Elmer Orlando Gorocica Lara ",
+    "entidad": 31,
+    "ganadora": true
+  },  {
+    "cct": "31DES2016Y",
+    "lat": 20.8778939416667,
+    "lng": -89.7554319122793,
+    "nombre": "Escuela Secundaria Roosevelt Ercé Barrón Pech'",
+    "ganadora": true
+  },  {
+    "cct": "04DPR0693T",
+    "lat": 19.8463639265057,
+    "lng": -90.4873830066796,
+    "nombre": "Escuela Primaria Niños Héroes'",
+    "ganadora": true
+  },  {
+    "cct": "26EJN0208D",
+    "lat": 29.0996465435291,
+    "lng": -111.026626452154,
+    "nombre": "Preescolar Adelina Encinas Ezre",
+    "ganadora": true
+  },  {
+    "cct": "30DTV0781K",
+    "lat": 19.5324571785533,
+    "lng": -96.9031355127631,
+    "nombre": "Telesecundaria Sebastián Lerdo de Tejada ",
+    "ganadora": true
+  },  {
+    "cct": "11ETV0320L",
+    "lat": 20.3882918645797,
+    "lng": -101.443180544921,
+    "nombre": "Telesecundaria No. 324",
+    "entidad": 11,
+    "ganadora": true
+  }
+ ]
+}

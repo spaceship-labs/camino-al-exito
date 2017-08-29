@@ -9,6 +9,7 @@
  */
 angular.module('caminoAlExitoApp')
   .controller('Home2017Ctrl', function ($scope, $http) {
+    console.log('lolll2');
     $scope.center = {
         zoom:12
     };
@@ -23,9 +24,10 @@ angular.module('caminoAlExitoApp')
     var mainLat = 25.24469595130604,
         mainLng = -100.9855409;
 
-    function loadMarkers(data) {
+    function processMarkers() {
       var exists = {};
-      var markers = data.map(function(cct) {
+      return [exists, function(cct) {
+        console.log('cct', cct);
         cct.message = cct.nombre;
         exists[cct.entidad] = true;
         cct.icon ={
@@ -36,7 +38,15 @@ angular.module('caminoAlExitoApp')
           cct.icon.iconUrl = "images/pinganador.png";
         }
         return cct;
-      });
+      }]
+
+    }
+
+    function loadMarkers(data) {
+      var process = processMarkers();
+      var exists = process[0];
+      //var markers = data['2015-2016'].map(process[1]);
+      var markers = data['2016-2017'].map(process[1]);
 
       $scope.ccts = markers;
 
