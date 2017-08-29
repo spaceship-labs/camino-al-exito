@@ -31,9 +31,13 @@ angular.module('caminoAlExitoApp')
         cct.message = cct.nombre;
         exists[cct.entidad] = true;
         cct.icon ={
-          iconUrl:'images/' + cct.p +'.png',
           iconSize:[30, 45],
         };
+        if (cct.p == '2015-2016') {
+          cct.icon.iconUrl = '/images/2015-2016.png';
+        } else {
+          cct.icon.iconUrl = '/images/2016-2017.png';
+        }
         return cct;
       }];
 
