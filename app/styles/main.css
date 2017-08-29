@@ -447,7 +447,7 @@ ul.dropdown-menu{background: #fff;color: #868686;position: absolute;width: 100%;
 
 @media only screen and (max-width: 480px) {
       .own1, .own2 {
-        max-width: 35%;
+        max-width: 19% !important;
       }
 
       #home .win-school a{
