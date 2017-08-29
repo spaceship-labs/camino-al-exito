@@ -155,7 +155,7 @@ angular.module('caminoAlExitoApp')
     });
     */
 
-    $http.get('/educaccion.json').then(function(res){
+    $http.get('/educaccion.abcdef2.json').then(function(res){
       loadMarkers(res.data);
       //$scope.ccts = res.data;
     });
