@@ -44,6 +44,11 @@ angular
         controller: 'Home2017Ctrl',
         controllerAs: 'home2017'
       })
+      .when('/escuela', {
+        templateUrl: 'views/escuela.html',
+        controller: 'EscuelaCtrl',
+        controllerAs: 'escuela'
+      })
       .otherwise({
         redirectTo: '/'
       });

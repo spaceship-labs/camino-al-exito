@@ -454,3 +454,80 @@ ul.dropdown-menu{background: #fff;color: #868686;position: absolute;width: 100%;
         font-size: 12px !important;
       }
 }
+
+#perfil{
+  background: white;
+}
+#perfil .sub-header .logo{
+  margin: 25px;
+}
+
+#perfil .main-title{
+  background-color: #F39146;
+  padding-bottom: 20px;
+}
+
+#perfil p, #perfil h1{color: white;}
+
+#perfil .main-title .title{
+  padding: 15px;
+}
+
+#perfil .main-title h1{
+  font-size: 54px;
+  font-weight: bold;
+  line-height: 40px;
+  margin: 0 0 0 3px;
+}
+
+#perfil .main-title .type{
+  font-size: 22px;
+  font-weight: normal;
+}
+
+#perfil .main-title .location{
+  margin-top: 5px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+#perfil .main-title .location span{
+  font-weight: normal;
+}
+
+#perfil .main-title .main-text{
+  font-size: 17px;
+  font-weight: bold;
+  line-height: normal;
+}
+
+#perfil .main-title .border-right{
+  border-right: 1px solid white;
+  padding-right: 11px;
+}
+
+#perfil .project{
+  padding-left: 10px;
+}
+
+#perfil .mini-cup{
+  width: 35px;
+  height: 35px;
+  padding-top: 4px;
+  margin-right: 3px;
+}
+
+#perfil .main-content{
+  margin-top: 20px;
+}
+
+#perfil .main-content-text h3{
+  font-size: 22px;
+  font-weight: bold;
+}
+
+#perfil .main-content-text p{
+  color: black;
+  font-size: 15px;
+  text-align: justify;
+}
