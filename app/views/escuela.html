@@ -60,4 +60,11 @@
       </p>
     </div>
   </div>
+<ul rn-carousel rn-carousel-index="carouselIndex2" rn-carousel-auto-slide rn-carousel-pause-on-hover rn-carousel-buffered class="carousel2" rn-carousel-transition="hexagon">
+    <li ng-repeat="slide in imgs track by $index" ng-class="'id-' + $index">
+        <div ng-style="{'background-image': 'url(' + slide + ')'}"  class="bgimage">
+        </div>
+    </li>
+</ul>
+<div class="indicators-ca" rn-carousel-indicators ng-if="imgs.length > 1" slides="imgs" rn-carousel-index="carouselIndex2"></div>
 </div>

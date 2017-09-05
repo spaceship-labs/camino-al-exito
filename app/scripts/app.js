@@ -17,7 +17,8 @@ angular
     'ngMaterial',
     'firebase',
     'ngFileReader',
-    'leaflet-directive'
+    'leaflet-directive',
+    'angular-carousel'
   ])
   .config(function($routeProvider) {
     //$locationProvider.html5Mode(true);

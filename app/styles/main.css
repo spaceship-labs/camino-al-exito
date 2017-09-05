@@ -457,7 +457,13 @@ ul.dropdown-menu{background: #fff;color: #868686;position: absolute;width: 100%;
 
 #perfil{
   background: white;
+  overflow: hidden;
 }
+
+#perfil .sub-header{
+  padding: 0 20px;
+}
+
 #perfil .sub-header .logo{
   margin: 25px;
 }
@@ -530,4 +536,46 @@ ul.dropdown-menu{background: #fff;color: #868686;position: absolute;width: 100%;
   color: black;
   font-size: 15px;
   text-align: justify;
+}
+
+.slider-carousel{
+  height: 300px;
+}
+
+.bgimage {
+  text-align:right;
+  color:white;
+  background-size:cover;
+  height: 100%;
+  background-position: center center;
+}
+
+ul[rn-carousel] {
+    max-width: 600px;
+    height: 400px;
+    margin: 20px auto 10px;
+}
+
+.custom-indicator span {
+  transition: all 0.3s ease-in;
+}
+.custom-indicator span.active {
+  color:yellow !important;
+}
+
+.indicators-ca{
+  text-align: center;
+}
+
+#perfil div.rn-carousel-indicator{
+  margin-bottom: 20px;
+}
+
+#perfil div.rn-carousel-indicator span{
+  font-size: 26px;
+  color: #67A1D1;
+}
+
+#perfil div.rn-carousel-indicator span.active{
+  color: #2C72B7;
 }
