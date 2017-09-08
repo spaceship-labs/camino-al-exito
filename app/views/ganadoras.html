@@ -29,8 +29,8 @@
 
   <div class="schools" layout='column' layout-sm="column" layout-align="center" flex="70" ng-show="date==='2016-2017'">
     <p layout='row' layout-sm='column' flex-sm="100" ng-repeat="(key,school) in schools">
-      <a ng-href="{{school[0].img}}" target="_self" flex>{{school[0].name}}<i>{{school[0].geo}}</i></a>
-      <a ng-href="{{school[1].img}}" target="_self" flex>{{school[1].name}}<i>{{school[1].geo}}</i></a>
+      <a ng-href="#!/escuela/{{school[0].cct}}" target="_self" flex>{{school[0].name}}<i>{{school[0].geo}}</i></a>
+      <a ng-href="#!/escuela/{{school[1].cct}}" target="_self" flex>{{school[1].name}}<i>{{school[1].geo}}</i></a>
     </p>
   </div>
 
