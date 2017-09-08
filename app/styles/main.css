@@ -482,8 +482,9 @@ ul.dropdown-menu{background: #fff;color: #868686;position: absolute;width: 100%;
 #perfil .main-title h1{
   font-size: 54px;
   font-weight: bold;
-  line-height: 40px;
+  line-height: 50px;
   margin: 0 0 0 3px;
+  max-width: 700px;
 }
 
 #perfil .main-title .type{
@@ -578,4 +579,13 @@ ul[rn-carousel] {
 
 #perfil div.rn-carousel-indicator span.active{
   color: #2C72B7;
+}
+
+#perfil ol, #perfil ul{
+  list-style: circle;
+}
+
+#perfil .video-container iframe{
+  width: 100%!important;
+  height: 535px !important;
 }

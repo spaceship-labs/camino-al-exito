@@ -1,6 +1,8 @@
 <div id="perfil">
   <div class="sub-header" layout="row" layout-align="space-between">
-    <img class="logo" src="images/educaaccion.png" alt="Educaccion">
+    <a href="/#!/">
+      <img class="logo" src="images/educaaccion.png" alt="Educaccion">
+    </a>
     <div class="sub-header-logo " layout="row" layout-align="center center">
       <img class="logo" src="images/despierta.png" alt="Despierta con Loret">
       <img class="logo" src="images/televisa.png" alt="Televisa">
@@ -13,15 +15,15 @@
       <div class="name" layout="column">
         <h1>
           <span class="type">
-            Escuela primaria
+            Escuela {{sc.nivel}}
             <br>
           </span>
-          Benito Juárez
+          {{sc.nombre}}
 
         </h1>
         <p class="location">
-          Inde, Durango
-          <span>CCT: 109PDDEE</span>
+          {{sc.estado}}
+          <span>CCT: {{sc.cct}}</span>
         </p>
       </div>
     </div>
@@ -38,16 +40,17 @@
       </div>
       <div class="project" layout="column">
         <p class="text">PROYECTO:</p>
-        <p class="main-text">El baúl de lectura, la escritura y las matematicas</p>
+        <p class="main-text">{{sc.proyecto}}</p>
       </div>
     </div>
   </div>
   <div class="main-content container">
-    <div class="video-container">
-      <iframe width="100%" height="535" src="//www.youtube.com/embed/G4FOZyoB74Y" frameborder="0" allowfullscreen="" id="cct-video"></iframe>
+    <div class="video-container" ng-if="sc.yt">
+      <youtube-video video-id="sc.yt"></youtube-video>
     </div>
 
-    <div class="main-content-text">
+    <div class="main-content-text" btf-markdown ng-include="'views/winners/' + sc.cct +'.html'">
+      <!--
       <h3>Lorem ipsum dolor sit amet.</h3>
       <p>
 
@@ -58,13 +61,14 @@
   Nulla in mattis felis, sit amet tincidunt quam. Donec dapibus odio nisl, sed vulputate velit convallis a. Nunc tellus ex, porttitor vel tempor nec, varius et nisl. Aliquam et tincidunt mi. Cras sed massa ante. Nunc rhoncus pharetra ipsum vitae condimentum. Mauris tempor feugiat augue, nec posuere ligula pulvinar ut. Pellentesque sit amet gravida tellus. Nam semper, nunc mattis consectetur fermentum, nisl felis sodales ante, eu porttitor diam libero quis massa. Integer ut suscipit nisi, ac gravida purus. Integer ligula dui, blandit non lectus eu, consectetur volutpat nulla. Curabitur id elit a tortor aliquet bibendum sed at dui. Vivamus molestie eros et odio fringilla, id auctor ante pellentesque. Vestibulum varius nisl quis urna luctus tristique id nec nisl
 
       </p>
+      -->
     </div>
   </div>
-<ul rn-carousel rn-carousel-index="carouselIndex2" rn-carousel-auto-slide rn-carousel-pause-on-hover rn-carousel-buffered class="carousel2" rn-carousel-transition="hexagon">
-    <li ng-repeat="slide in imgs track by $index" ng-class="'id-' + $index">
+<ul rn-carousel rn-carousel-index="carouselIndex2" rn-carousel-pause-on-hover rn-carousel-buffered class="carousel2" rn-carousel-transition="hexagon">
+    <li ng-repeat="slide in sc.imgs track by $index" ng-class="'id-' + $index">
         <div ng-style="{'background-image': 'url(' + slide + ')'}"  class="bgimage">
         </div>
     </li>
 </ul>
-<div class="indicators-ca" rn-carousel-indicators ng-if="imgs.length > 1" slides="imgs" rn-carousel-index="carouselIndex2"></div>
+<div class="indicators-ca" rn-carousel-indicators ng-if="sc.imgs.length > 1" slides="sc.imgs" rn-carousel-index="carouselIndex2"></div>
 </div>

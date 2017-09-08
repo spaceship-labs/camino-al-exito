@@ -8,8 +8,8 @@
  * Controller of the caminoAlExitoApp
  */
 angular.module('caminoAlExitoApp')
-  .controller('Home2017Ctrl', function ($scope, $http) {
-    console.log('lolll2');
+  .controller('Home2017Ctrl', function ($scope, $http, winners) {
+    console.log('winners', winners);
     $scope.center = {
         zoom:12
     };
@@ -27,16 +27,16 @@ angular.module('caminoAlExitoApp')
     function processMarkers() {
       var exists = {};
       return [exists, function(cct) {
-        console.log('cct', cct);
         cct.message = cct.nombre;
         exists[cct.entidad] = true;
         cct.icon ={
           iconSize:[30, 45],
         };
-        if (cct.p == '2015-2016') {
+        if (cct.p === '2015-2016') {
           cct.icon.iconUrl = '/images/2015-2016.png';
         } else {
           cct.icon.iconUrl = '/images/2016-2017.png';
+          cct.message = '<a href="#!/escuela/'+cct.cct+'">'+cct.message+'</a>';
         }
         return cct;
       }];
@@ -155,10 +155,7 @@ angular.module('caminoAlExitoApp')
     });
     */
 
-    $http.get('/educaccion.abcdef2.json').then(function(res){
-      loadMarkers(res.data);
-      //$scope.ccts = res.data;
-    });
+    loadMarkers(winners);
 
     this.awesomeThings = [
       'HTML5 Boilerplate',

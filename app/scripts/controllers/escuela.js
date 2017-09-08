@@ -8,12 +8,16 @@
  * Controller of the caminoAlExitoApp
  */
 angular.module('caminoAlExitoApp')
-  .controller('EscuelaCtrl', function ($scope) {
+  .controller('EscuelaCtrl', function ($scope, $routeParams, winners) {
+    var selected = winners["2016-2017"].filter(function(c) {
+      return c.cct === $routeParams.id;
+    });
+    $scope.sc = selected[0];
+
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
 
-    $scope.imgs = ['http://lorempixel.com/450/300/people/0', 'http://lorempixel.com/450/300/people/1', 'http://lorempixel.com/450/300/people/2', 'http://lorempixel.com/450/300/people/3']
   });

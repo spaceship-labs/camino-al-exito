@@ -18,7 +18,9 @@ angular
     'firebase',
     'ngFileReader',
     'leaflet-directive',
-    'angular-carousel'
+    'angular-carousel',
+    'btford.markdown',
+    'youtube-embed'
   ])
   .config(function($routeProvider) {
     //$locationProvider.html5Mode(true);
@@ -45,7 +47,7 @@ angular
         controller: 'Home2017Ctrl',
         controllerAs: 'home2017'
       })
-      .when('/escuela', {
+      .when('/escuela/:id', {
         templateUrl: 'views/escuela.html',
         controller: 'EscuelaCtrl',
         controllerAs: 'escuela'
