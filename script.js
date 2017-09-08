@@ -14,4 +14,5 @@ function process(prefix, cct) {
   console.log('files', files);
 }
 
-process('/images/winners/', '11ETV0320L');
+//process('/images/winners/', '31DES2016Y');
+process('/images/winners/', '24DST0072L');

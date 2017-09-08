@@ -1503,8 +1503,8 @@ angular.module('caminoAlExitoApp')
   '/images/winners/24DST0072L/20160623_093833.jpg',
   '/images/winners/24DST0072L/20160915_191353.jpg',
   '/images/winners/24DST0072L/pastedImage.png',
-  '/images/winners/24DST0072L/pastedImage_(1).png',
-  '/images/winners/24DST0072L/pastedImage_(2).png' ]
+  '/images/winners/24DST0072L/pastedImage__1_.png',
+  '/images/winners/24DST0072L/pastedImage__2_.png' ]
   },  {
     "cct": "31EES0080K",
     "lat": 21.0333099749843,
@@ -1544,8 +1544,8 @@ angular.module('caminoAlExitoApp')
   '/images/winners/31DES2016Y/Copy_of_3.jpg',
   '/images/winners/31DES2016Y/Copy_of_5.jpg',
   '/images/winners/31DES2016Y/Copy_of_Normasparaconvivencia.jpg',
-  '/images/winners/31DES2016Y/Copy_of_actintegración_(1).jpg',
-  '/images/winners/31DES2016Y/Copy_of_actintegración_(3).jpg',
+  '/images/winners/31DES2016Y/Copy_of_actintegración__1_.jpg',
+  '/images/winners/31DES2016Y/Copy_of_actintegración__3_.jpg',
   '/images/winners/31DES2016Y/Copy_of_diapaz.jpg',
   '/images/winners/31DES2016Y/Copy_of_jovenesdeportivos.jpg',
   '/images/winners/31DES2016Y/Copy_of_letrerosfamilia.jpg',
