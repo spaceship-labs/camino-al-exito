@@ -480,9 +480,9 @@ ul.dropdown-menu{background: #fff;color: #868686;position: absolute;width: 100%;
 }
 
 #perfil .main-title h1{
-  font-size: 54px;
+  font-size: 40px;
   font-weight: bold;
-  line-height: 50px;
+  line-height: 35px;
   margin: 0 0 0 3px;
   max-width: 700px;
 }
@@ -583,9 +583,22 @@ ul[rn-carousel] {
 
 #perfil ol, #perfil ul{
   list-style: circle;
+  font-size: 15px;
+  padding: 10px 0 10px 23px;
 }
 
 #perfil .video-container iframe{
   width: 100%!important;
   height: 535px !important;
+}
+#perfil .load-more{
+  margin-top: 10px;
+  display: block;
+}
+#perfil .load-more span{
+  padding: 11px 20px;
+  background: #65A2D7;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
 }
