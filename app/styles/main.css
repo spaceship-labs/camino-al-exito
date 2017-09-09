@@ -549,6 +549,7 @@ ul.dropdown-menu{background: #fff;color: #868686;position: absolute;width: 100%;
   background-size:cover;
   height: 100%;
   background-position: center center;
+  background-size: 100% 100%;
 }
 
 ul[rn-carousel] {
