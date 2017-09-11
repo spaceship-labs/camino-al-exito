@@ -46,7 +46,7 @@
   </div>
   <div class="main-content container">
     <div class="video-container" ng-if="sc.yt">
-      <youtube-video video-id="sc.yt"></youtube-video>
+      <youtube-video ng-repeat="y in sc.yt" video-id="y"></youtube-video>
     </div>
 
     <div class="main-content-text" btf-markdown ng-include="'views/winners/' + sc.cct +'.html'">

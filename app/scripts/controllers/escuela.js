@@ -13,6 +13,9 @@ angular.module('caminoAlExitoApp')
       return c.cct === $routeParams.id;
     });
     $scope.sc = selected[0];
+    if ($scope.sc.yt && !$scope.sc.yt.pop) {
+      $scope.sc.yt = [$scope.sc.yt];
+    }
 
     this.awesomeThings = [
       'HTML5 Boilerplate',
