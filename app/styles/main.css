@@ -549,7 +549,8 @@ ul.dropdown-menu{background: #fff;color: #868686;position: absolute;width: 100%;
   background-size:cover;
   height: 100%;
   background-position: center center;
-  background-size: 100% 100%;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
 }
 
 ul[rn-carousel] {
@@ -641,4 +642,10 @@ ul[rn-carousel] {
 
 #perfil .trophy{
   padding: 5px 10px;
+}
+
+@media only screen and (max-width: 500px) {
+  #perfil .bgimage{
+    background-size: 100% 90%;
+  }
 }
