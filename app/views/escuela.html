@@ -75,8 +75,8 @@
     </a>
   </div>
   <div class="carousel">
-    <ul rn-carousel rn-carousel-index="carouselIndex2" rn-carousel-pause-on-hover rn-carousel-buffered class="carousel2"  rn-carousel-auto-slide>
-        <li ng-repeat="slide in sc.imgs track by $index">
+    <ul rn-carousel rn-carousel-index="carouselIndex2" rn-carousel-auto-slide rn-carousel-pause-on-hover class="carousel2">
+        <li ng-repeat="slide in sc.imgs track by $index" class="li-bgimage">
             <div ng-style="{'background-image': 'url(' + slide + ')'}"  class="bgimage">
             </div>
         </li>
