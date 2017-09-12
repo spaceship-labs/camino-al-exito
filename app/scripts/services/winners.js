@@ -1591,7 +1591,7 @@ angular.module('caminoAlExitoApp')
     "ganadora": true,
     "proyecto": "Todos por la mejora del centro escolar",
     "nivel": "preescolar",
-    "yt": ["vneBcLQ0SA", "nyBjliwx_x0"],
+    "yt": ["2vneBcLQ0SA", "nyBjliwx_x0"],
     "estado": "Hermosillo, Sonora",
     "imgs": [ '/images/winners/26EJN0208D/Copy_of_10Q.jpg',
   '/images/winners/26EJN0208D/Copy_of_12742072_1059457290767207_1106172027250608766_n.jpg',
