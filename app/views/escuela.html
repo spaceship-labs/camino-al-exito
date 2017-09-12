@@ -11,7 +11,7 @@
   </div>
   <div class="main-title">
     <div class="title" layout="row" layout-align="center center">
-      <img src="images/trofeo-perfil.png" alt="Trofeo">
+      <img class="trophy" src="images/trofeo-perfil.png" alt="Trofeo">
       <div class="name" layout="column">
         <h1>
           <span class="type">
@@ -61,11 +61,24 @@
       </span>
     </a>
   </div>
-<ul rn-carousel rn-carousel-index="carouselIndex2" rn-carousel-pause-on-hover rn-carousel-buffered class="carousel2" rn-carousel-transition="none" rn-carousel-auto-slide>
-    <li ng-repeat="slide in sc.imgs track by $index" ng-class="'id-' + $index">
-        <div ng-style="{'background-image': 'url(' + slide + ')'}"  class="bgimage">
-        </div>
-    </li>
-</ul>
-<div class="indicators-ca" rn-carousel-indicators ng-if="sc.imgs.length > 1" slides="sc.imgs" rn-carousel-index="carouselIndex2"></div>
+  <div class="carousel">
+    <ul rn-carousel rn-carousel-index="carouselIndex2" rn-carousel-pause-on-hover rn-carousel-buffered class="carousel2" rn-carousel-transition="none"  rn-carousel-auto-slide>
+        <li ng-repeat="slide in sc.imgs track by $index" ng-class="'id-' + $index">
+            <div ng-style="{'background-image': 'url(' + slide + ')'}"  class="bgimage">
+            </div>
+        </li>
+    </ul>
+
+    <div class="indicators-ca" ng-if="sc.imgs.length > 1" slides="sc.imgs" rn-carousel-index="carouselIndex2">
+      <span class="arrows left no-select-text" ng-click="$parent.carouselIndex2=calcSlide($parent.carouselIndex2, 'left')">
+        <i class="fa fa-chevron-left fa-5x" aria-hidden="true"></i>
+      </span>
+      <span class="arrows right no-select-text" ng-click="$parent.carouselIndex2=calcSlide($parent.carouselIndex2, 'right')">
+        <i class="fa fa-chevron-right fa-5x" aria-hidden="true"></i>
+      </span>
+    </div>
+
+    <div class="indicators-ca no-select-text" rn-carousel-indicators ng-if="sc.imgs.length > 1" slides="sc.imgs" rn-carousel-index="carouselIndex2"></div>
+  </div>
+
 </div>

@@ -17,6 +17,17 @@ angular.module('caminoAlExitoApp')
       $scope.sc.yt = [$scope.sc.yt];
     }
 
+    $scope.calcSlide = function($index, dir) {
+      var len = $scope.sc.imgs.length;
+      var i = len;
+      if (dir === 'right') {
+        i = ++$index%len;
+      } else if ($index-1 >= 0) {
+        i = --$index;
+      }
+      return i;
+    };
+
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',

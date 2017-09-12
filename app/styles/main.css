@@ -470,7 +470,7 @@ ul.dropdown-menu{background: #fff;color: #868686;position: absolute;width: 100%;
 
 #perfil .main-title{
   background-color: #F39146;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 
 #perfil p, #perfil h1{color: white;}
@@ -484,7 +484,7 @@ ul.dropdown-menu{background: #fff;color: #868686;position: absolute;width: 100%;
   font-weight: bold;
   line-height: 35px;
   margin: 0 0 0 3px;
-  max-width: 700px;
+  /*max-width: 700px;*/
 }
 
 #perfil .main-title .type{
@@ -602,4 +602,39 @@ ul[rn-carousel] {
   font-size: 16px;
   color: white;
   cursor: pointer;
+}
+
+#perfil .carousel{
+  position: relative;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+#perfil .carousel .arrows{
+  position: absolute;
+  /*font-size: 70px;*/
+  top: 179px;
+  color: #2C72B7;
+  cursor: pointer;
+}
+
+#perfil .carousel .arrows.left{
+  left: 0;
+}
+
+#perfil .carousel .arrows.right{
+  right: 0;
+}
+
+.no-select-text{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#perfil .trophy{
+  padding: 5px 10px;
 }
