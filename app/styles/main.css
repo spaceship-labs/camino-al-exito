@@ -626,6 +626,10 @@ ul[rn-carousel] {
   right: 0;
 }
 
+#perfil .name{
+  padding-right: 20px;
+}
+
 .no-select-text{
   -webkit-touch-callout: none;
   -webkit-user-select: none;
