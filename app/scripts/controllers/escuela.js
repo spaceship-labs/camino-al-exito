@@ -23,9 +23,8 @@ angular.module('caminoAlExitoApp')
 
     $scope.currentVideo = 0;
     $scope.nextVideo = function($index, dir) {
-      console.log('index', $index, dir);
       var n = nextIndex($index, $scope.sc.yt.length, dir);
-      $scope.currentVideo = n;
+      $scope.currentVideo = n==2?1:n;
     };
 
     function nextIndex($index, len, dir){
