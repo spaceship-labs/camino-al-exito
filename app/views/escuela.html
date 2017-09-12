@@ -57,7 +57,7 @@
           </span>
         </div>
       </div>
-      <div ng-repeat="y in sc.yt" ng-show="currentVideo === $index" class="animate-show-hide">
+      <div ng-repeat="y in sc.yt" ng-show="currentVideo === $index" ng-animate="'animate'">
         <youtube-video video-id="y"></youtube-video>
       </div>
     </div>
@@ -75,7 +75,7 @@
     </a>
   </div>
   <div class="carousel">
-    <ul rn-carousel rn-carousel-index="carouselIndex2" rn-carousel-pause-on-hover rn-carousel-buffered class="carousel2"  rn-carousel-auto-slide rn-carousel-transition="none">
+    <ul rn-carousel rn-carousel-index="carouselIndex2" rn-carousel-pause-on-hover rn-carousel-buffered class="carousel2"  rn-carousel-auto-slide>
         <li ng-repeat="slide in sc.imgs track by $index">
             <div ng-style="{'background-image': 'url(' + slide + ')'}"  class="bgimage">
             </div>

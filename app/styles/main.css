@@ -658,12 +658,3 @@ ul[rn-carousel] {
   top: 230px;
 }
 
-#perfil .animate-show-hide.ng-hide {
-  opacity: 0;
-}
-
-#perfil  .animate-show-hide.ng-hide-add,
-#perfil  .animate-show-hide.ng-hide-remove {
-  transition: all linear .3s;
-}
-
