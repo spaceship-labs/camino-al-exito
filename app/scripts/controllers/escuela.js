@@ -18,7 +18,17 @@ angular.module('caminoAlExitoApp')
     }
 
     $scope.calcSlide = function($index, dir) {
-      var len = $scope.sc.imgs.length;
+      return nextIndex($index, $scope.sc.imgs.length, dir);
+    };
+
+    $scope.currentVideo = 0;
+    $scope.nextVideo = function($index, dir) {
+      console.log('index', $index, dir);
+      var n = nextIndex($index, $scope.sc.yt.length, dir);
+      $scope.currentVideo = n;
+    };
+
+    function nextIndex($index, len, dir){
       var i = len;
       if (dir === 'right') {
         i = ++$index%len;
@@ -26,7 +36,7 @@ angular.module('caminoAlExitoApp')
         i = --$index;
       }
       return i;
-    };
+    }
 
     this.awesomeThings = [
       'HTML5 Boilerplate',

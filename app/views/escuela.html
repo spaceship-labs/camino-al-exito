@@ -46,7 +46,20 @@
   </div>
   <div class="main-content container">
     <div class="video-container" ng-if="sc.yt">
-      <youtube-video ng-repeat="y in sc.yt" video-id="y"></youtube-video>
+
+      <div class="carousel video">
+        <div class="indicators-ca" ng-if="sc.yt.length > 1" slides="sc.imgs" rn-carousel-index="carouselIndex3">
+          <span class="arrows left no-select-text" ng-click="nextVideo(currentVideo, 'left')">
+            <i class="fa fa-chevron-left fa-5x" aria-hidden="true"></i>
+          </span>
+          <span class="arrows right no-select-text" ng-click="nextVideo(currentVideo, 'right')">
+            <i class="fa fa-chevron-right fa-5x" aria-hidden="true"></i>
+          </span>
+        </div>
+      </div>
+      <div ng-repeat="y in sc.yt" ng-show="currentVideo === $index" class="animate-show-hide">
+        <youtube-video video-id="y"></youtube-video>
+      </div>
     </div>
 
     <div class="main-content-text" btf-markdown ng-include="'views/winners/' + sc.cct +'.html'">
@@ -62,8 +75,8 @@
     </a>
   </div>
   <div class="carousel">
-    <ul rn-carousel rn-carousel-index="carouselIndex2" rn-carousel-pause-on-hover rn-carousel-buffered class="carousel2" rn-carousel-transition="none"  rn-carousel-auto-slide>
-        <li ng-repeat="slide in sc.imgs track by $index" ng-class="'id-' + $index">
+    <ul rn-carousel rn-carousel-index="carouselIndex2" rn-carousel-pause-on-hover rn-carousel-buffered class="carousel2"  rn-carousel-auto-slide rn-carousel-transition="none">
+        <li ng-repeat="slide in sc.imgs track by $index">
             <div ng-style="{'background-image': 'url(' + slide + ')'}"  class="bgimage">
             </div>
         </li>
