@@ -535,8 +535,10 @@ ul.dropdown-menu{background: #fff;color: #868686;position: absolute;width: 100%;
 
 #perfil .main-content-text p{
   color: black;
-  font-size: 15px;
+  font-size: 14px;
   text-align: justify;
+  line-height: normal;
+  margin-bottom: 10px;
 }
 
 .slider-carousel{
@@ -585,8 +587,8 @@ ul[rn-carousel] {
 
 #perfil ol, #perfil ul{
   list-style: circle;
-  font-size: 15px;
-  padding: 10px 0 10px 23px;
+  font-size: 14px;
+  padding: 0 0 10px 23px;
 }
 
 #perfil .video-container iframe{
@@ -594,7 +596,7 @@ ul[rn-carousel] {
   height: 535px !important;
 }
 #perfil .load-more{
-  margin-top: 10px;
+  margin-top: 20px;
   display: block;
 }
 #perfil .load-more span{

@@ -1446,8 +1446,7 @@ angular.module('caminoAlExitoApp')
   '/images/winners/14EPR0451B/Copy_of_Imagen42.png',
   '/images/winners/14EPR0451B/Copy_of_Imagen45.png',
   '/images/winners/14EPR0451B/Copy_of_Imagen48.png',
-  '/images/winners/14EPR0451B/Copy_of_Imagen53.png',
-  '/images/winners/14EPR0451B/Copy_of_Imagen59.jpg' ]
+  '/images/winners/14EPR0451B/Copy_of_Imagen53.png']
   },  {
     "cct": "10DPR0585W",
     "nombre": "Escuela Primaria Benito Juárez",
