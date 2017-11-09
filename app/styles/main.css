@@ -386,6 +386,7 @@ ul.dropdown-menu{background: #fff;color: #868686;position: absolute;width: 100%;
 .winner-link{background-color: #20B45E;padding-bottom:40px;}
 .winner-link .ribbon{background:url(../images/ganadoras_blue.png) no-repeat;}
 .winner-link h2{font-size:25px; line-height:normal; font-weight:700; color:white; text-align: center;}
+.winner-link h2 a{color: white;}
 
 /*redesign*/
 #header{background: url(../images/nino_big.jpg) no-repeat center center; background-size: cover;}
