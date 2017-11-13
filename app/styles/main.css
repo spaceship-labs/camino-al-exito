@@ -167,6 +167,9 @@ transition: height .2s;
 
 	ul.dropdown-menu{max-width: 240px}
 	#toggle-compara{display: none;}
+  #home .links a{
+    width: 100px !important;
+  }
 }
 
 .upper{text-transform: uppercase;}
