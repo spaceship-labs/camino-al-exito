@@ -13,6 +13,7 @@
   "globals": {
     "angular": false,
     "Firebase": true,
-    "firebase": true
+    "firebase": true,
+    "ga": true
   }
 }

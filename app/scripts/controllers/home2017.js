@@ -157,6 +157,10 @@ angular.module('caminoAlExitoApp')
 
     loadMarkers(winners);
 
+    $scope.ga = function() {
+      ga('send', 'event', 'registra-tu-proyecto', 'click');
+    };
+
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
