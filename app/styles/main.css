@@ -674,3 +674,27 @@ ul[rn-carousel] {
   color: white;
   padding: 5px;
 }
+
+.banner-b{
+  margin-bottom: 30px;
+}
+
+.banner-b h2, .banner-b h3{
+  text-align: center;
+  font-weight: bold;
+  line-height: normal;
+}
+
+.banner-b h2{
+  color: #256BAA;
+  font-size: 26px;
+}
+
+#home .banner-b h3{
+  color: #67A3D7;
+  font-size: 24px;
+}
+
+.banner-b .orange-text{
+  color: #F4913D;
+}
