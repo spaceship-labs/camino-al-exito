@@ -21,6 +21,6 @@
   "appPath": "app",
   "moduleName": "caminoAlExitoApp",
   "resolutions": {
-    "angular": "1.6.6"
+    "angular": "1.6.10"
   }
 }
