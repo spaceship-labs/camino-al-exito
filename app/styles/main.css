@@ -392,13 +392,13 @@ ul.dropdown-menu{background: #fff;color: #868686;position: absolute;width: 100%;
 .winner-link h2 a{color: white;}
 
 /*redesign*/
-#header{background: url(../images/nino_big.jpg) no-repeat center center; background-size: cover;}
+#header{background: url(../images/nino_big.jpg) no-repeat center top; background-size: cover;}
 #header .header-owners{background-color: rgba(255, 255, 255, .6)}
 #header .header-owners .own1{padding: 13px 30px;}
 #header .header-owners .own2{padding: 15px 18px;}
-#header .header-main img{padding: 65px 0;}
-#header .header-content{background-color: rgba(32, 125, 216, .9); text-align: center;}
-#header .header-content h1{font-size: 27px; padding: 59px 0 0; color: white; font-weight: bold;}
+#header .header-main img{padding: 7px 0;}
+#header .header-content{background: url(../images/confeti.png) no-repeat rgba(32, 125, 216, .9); text-align: center;padding: 35px 0; background-position: center 26px;}
+#header .header-content h1{font-size: 35px; padding: 13px 0 0; color: white; font-weight: bold;}
 #header .header-content h2{font-size: 16px; font-weight: bold; color: white; padding: 0 0 51px;}
 
 /*home*/
@@ -697,4 +697,48 @@ ul[rn-carousel] {
 
 .banner-b .orange-text{
   color: #F4913D;
+}
+
+.header-content .circle{
+  border-radius:50%;
+  display: inline-block;
+}
+
+.header-content .cup{
+  background: white;;
+  width: 120px;
+  height:120px;
+  margin: 0 auto;
+}
+
+.header-content .cup img{
+  width: 80px;
+  padding: 20px;
+}
+.header-content .list-win{
+  max-width: 80%;
+  margin: 0 auto;
+}
+.header-content .list-win .circle{
+  background-color: #EDC75C;
+  width: 15px;
+  height: 15px;
+  margin: 2px 12px;
+}
+
+.header-content .list-win p{
+  text-align: left;
+  font-size: 25px;
+  line-height: 20px;
+  color: white;
+  font-weight: bold;
+}
+.header-content .list-win .info{
+  font-size: 18px;
+  padding-left: 39px;
+  font-weight: 100;
+}
+
+.header-content .win{
+  margin: 15px 0;
 }
