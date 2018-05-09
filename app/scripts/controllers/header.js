@@ -34,7 +34,8 @@ angular.module('caminoAlExitoApp')
 
     $scope.logout = login.logout;
     */
-    $scope.winners = [
+    $scope.winners = [];
+    $scope.winners2 = [
  {
    "nombre": "Bachillerato Gral. Francisco J. Mugica",
    "cct": "30EBH0383C",
