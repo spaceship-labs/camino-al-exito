@@ -729,11 +729,12 @@ ul[rn-carousel] {
 }
 
 .header-content .list-win p{
-  text-align: left;
+  text-align: center;
   font-size: 24px;
   line-height: 22px;
   color: white;
   font-weight: bold;
+  width: 100%;
 }
 .header-content .list-win .info{
   font-size: 18px;
@@ -741,5 +742,13 @@ ul[rn-carousel] {
 }
 
 .header-content .win{
-  margin: 15px 0;
+  margin: 5px 0;
+  border-radius: 10px;
+  background-color: #F59139;
+  padding: 10px;
+  min-height: 90px;
+}
+
+.header-content .win:hover{
+  background-color: #64A3D8;
 }

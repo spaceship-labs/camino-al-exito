@@ -15,17 +15,16 @@
     <span class="circle cup">
        <img src="images/trofeo_3.png" alt="">
     </span>
-    <h1>¡Felicidades a los ganadores de EducAcción 2017-2018!</h1>
+    <h1>Conoce las historias ganadoras de EducAcción 2017-2018</h1>
 
     <div layout="row" layout-align="center center" class="list-win">
-      <div flex="90" layout="row" layout-wrap layout-align="space-around start" layout-fill ng-cloak>
-        <div flex="45" class="win" ng-repeat="win in winners" layout="row">
-          <span class="circle"></span>
+      <div flex="100" layout="row" layout-wrap layout-align="space-around start" layout-fill ng-cloak>
+        <a href="#" flex="40" class="win" ng-repeat="win in winners" layout="row">
           <p class="name">
             {{win.nombre}}            <br>
             <span class="info">{{win.cct}}, {{win.estado}}</span>
           </p>
-        </div>
+        </a>
 
       </div>
     </div>
