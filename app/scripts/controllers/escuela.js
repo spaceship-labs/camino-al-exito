@@ -9,7 +9,9 @@
  */
 angular.module('caminoAlExitoApp')
   .controller('EscuelaCtrl', function ($scope, $routeParams, winners) {
-    var selected = winners["2016-2017"].filter(function(c) {
+    $scope.date = $routeParams.periodo || "2016-2017";
+    $scope.pathFiles = $scope.date==="2016-2017"?"":$scope.date+"/";
+    var selected = winners[$scope.date].filter(function(c) {
       return c.cct === $routeParams.id;
     });
     $scope.sc = selected[0];

@@ -1640,6 +1640,34 @@ angular.module('caminoAlExitoApp')
     "estado": "Ayala, Guanajuato",
     //"yt": "BlQkVaB_a5o"
   }
+ ],
+ "2017-2018": [
+    {
+    "cct": "30EBH0383C",
+    "lat": 20.68624321404,
+    "lng": -103.318513942897,
+    "nombre": "Escuela Primaria Francisco Márquez",
+    "entidad": 14,
+    "ganadora": true,
+    "proyecto": "Padres y maestros en un mismo equipo",
+    "nivel": "primaria",
+    "estado": "Guadalajara, Guadalajara",
+    "yt": ["QPtQ6HpxZ_o", "gAIgZL0tT3Y"],
+    "imgs": [ '/images/winners/14EPR0451B/Copy_of_DSC_0007.jpg',
+  '/images/winners/14EPR0451B/Copy_of_DSC_0029.jpg',
+  '/images/winners/14EPR0451B/Copy_of_DSC_0043.jpg',
+  '/images/winners/14EPR0451B/Copy_of_DSC_0069.jpg',
+  '/images/winners/14EPR0451B/Copy_of_Imagen12.png',
+  '/images/winners/14EPR0451B/Copy_of_Imagen16.jpg',
+  '/images/winners/14EPR0451B/Copy_of_Imagen20.png',
+  '/images/winners/14EPR0451B/Copy_of_Imagen23.png',
+  '/images/winners/14EPR0451B/Copy_of_Imagen26.png',
+  '/images/winners/14EPR0451B/Copy_of_Imagen34.png',
+  '/images/winners/14EPR0451B/Copy_of_Imagen42.png',
+  '/images/winners/14EPR0451B/Copy_of_Imagen45.png',
+  '/images/winners/14EPR0451B/Copy_of_Imagen48.png',
+  '/images/winners/14EPR0451B/Copy_of_Imagen53.png']
+  }
  ]
 });
 //TODO limpiar escuelas participantes que no ganaron en la convocatoria: 2015-2016

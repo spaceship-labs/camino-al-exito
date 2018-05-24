@@ -45,26 +45,12 @@
     </div>
   </div>
   <div class="main-content container">
-    <div class="video-container" ng-if="sc.yt">
+    <div ng-include="'views/escuela_video.html'"  ng-if="sc.yt && date==='2016-2017'"></div>
+    <div ng-include="'views/escuela_carousel.html'" ng-if="date==='2017-2018'"></div>
 
-      <div class="carousel video">
-        <div class="indicators-ca" ng-if="sc.yt.length > 1" slides="sc.imgs" rn-carousel-index="carouselIndex3">
-          <span class="arrows left no-select-text" ng-click="nextVideo(currentVideo, 'left')">
-            <i class="fa fa-chevron-left fa-5x" aria-hidden="true"></i>
-          </span>
-          <span class="arrows right no-select-text" ng-click="nextVideo(currentVideo, 'right')">
-            <i class="fa fa-chevron-right fa-5x" aria-hidden="true"></i>
-          </span>
-        </div>
-      </div>
-      <div ng-repeat="y in sc.yt" ng-show="currentVideo === $index" ng-animate="'animate'">
-        <youtube-video video-id="y"></youtube-video>
-      </div>
+    <div class="main-content-text" btf-markdown ng-include="'views/winners/' + pathFiles + sc.cct +'.html'">
     </div>
-
-    <div class="main-content-text" btf-markdown ng-include="'views/winners/' + sc.cct +'.html'">
-    </div>
-    <div class="main-content-text" btf-markdown ng-show="sc.more" ng-include="'views/winners/' + sc.cct +'_more.html'">
+    <div class="main-content-text" btf-markdown ng-show="sc.more" ng-include="'views/winners/' + pathFiles + sc.cct +'_more.html'">
     </div>
 
     <a ng-click="sc.more=!sc.more" class="load-more">
@@ -74,24 +60,7 @@
       </span>
     </a>
   </div>
-  <div class="carousel">
-    <ul rn-carousel rn-carousel-index="carouselIndex2" rn-carousel-auto-slide rn-carousel-pause-on-hover class="carousel2">
-        <li ng-repeat="slide in sc.imgs track by $index" class="li-bgimage">
-            <div ng-style="{'background-image': 'url(' + slide + ')'}"  class="bgimage">
-            </div>
-        </li>
-    </ul>
-
-    <div class="indicators-ca" ng-if="sc.imgs.length > 1" slides="sc.imgs" rn-carousel-index="carouselIndex2">
-      <span class="arrows left no-select-text" ng-click="$parent.carouselIndex2=calcSlide($parent.carouselIndex2, 'left')">
-        <i class="fa fa-chevron-left fa-5x" aria-hidden="true"></i>
-      </span>
-      <span class="arrows right no-select-text" ng-click="$parent.carouselIndex2=calcSlide($parent.carouselIndex2, 'right')">
-        <i class="fa fa-chevron-right fa-5x" aria-hidden="true"></i>
-      </span>
-    </div>
-
-    <div class="indicators-ca no-select-text" rn-carousel-indicators ng-if="sc.imgs.length > 1" slides="sc.imgs" rn-carousel-index="carouselIndex2"></div>
-  </div>
+  <div ng-include="'views/escuela_carousel.html'" ng-if="date==='2016-2017'"></div>
+  <div class="container fixed-video-spacing" ng-include="'views/escuela_video.html'"  ng-if="sc.yt && date==='2017-2018'"></div>
 
 </div>

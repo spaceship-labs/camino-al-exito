@@ -1,0 +1,19 @@
+<div class="carousel">
+  <ul rn-carousel rn-carousel-index="carouselIndex2" rn-carousel-auto-slide rn-carousel-pause-on-hover class="carousel2">
+      <li ng-repeat="slide in sc.imgs track by $index" class="li-bgimage">
+          <div ng-style="{'background-image': 'url(' + slide + ')'}"  class="bgimage">
+          </div>
+      </li>
+  </ul>
+
+  <div class="indicators-ca" ng-if="sc.imgs.length > 1" slides="sc.imgs" rn-carousel-index="carouselIndex2">
+    <span class="arrows left no-select-text" ng-click="$parent.carouselIndex2=calcSlide($parent.carouselIndex2, 'left')">
+      <i class="fa fa-chevron-left fa-5x" aria-hidden="true"></i>
+    </span>
+    <span class="arrows right no-select-text" ng-click="$parent.carouselIndex2=calcSlide($parent.carouselIndex2, 'right')">
+      <i class="fa fa-chevron-right fa-5x" aria-hidden="true"></i>
+    </span>
+  </div>
+
+  <div class="indicators-ca no-select-text" rn-carousel-indicators ng-if="sc.imgs.length > 1" slides="sc.imgs" rn-carousel-index="carouselIndex2"></div>
+<div>

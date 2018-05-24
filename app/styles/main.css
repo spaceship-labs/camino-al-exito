@@ -752,3 +752,7 @@ ul[rn-carousel] {
 .header-content .win:hover{
   background-color: #64A3D8;
 }
+
+.fixed-video-spacing{
+  margin: 15px auto;
+}
