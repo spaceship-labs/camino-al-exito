@@ -1680,6 +1680,107 @@ angular.module('caminoAlExitoApp')
       '/images/winners/2017-2018/04DIN0014Q/Imagen_6.jpg',
       '/images/winners/2017-2018/04DIN0014Q/Imagen_7.jpg',
     ]
+  }, {
+    cct: "28DPR1452L",
+    nombre: "Primaria Ford No. 92",
+    estado: "Tampico, Tamaulipas",
+    proyecto: "Ayuda a reciclar y el mundo te hará brillar",
+    imgs: [
+       '/images/winners/2017-2018/28DPR1452L/28DPR1452LdiseYAa721.jpg',
+       '/images/winners/2017-2018/28DPR1452L/28DPR1452LDiseYAa7.jpg',
+       '/images/winners/2017-2018/28DPR1452L/28DPR1452LdiseYAa_801.jpg',
+       '/images/winners/2017-2018/28DPR1452L/28DPR1452LdiseYAa_813.jpg',
+       '/images/winners/2017-2018/28DPR1452L/28DPR1452LMICASA.jpg',
+    ]
+  }, {
+    cct: "03DCT0232V",
+    nombre: "CBTIS 62 General Agustín Olachea Avilés",
+    estado: "La Paz, Baja California Sur",
+    proyecto: "Conviviendo y mejorando nuestro comunidad escolar",
+    cat: "Mejora en la convivencia",
+    imgs: [
+       '/images/winners/2017-2018/03DCT0232V/1.jpg',
+       '/images/winners/2017-2018/03DCT0232V/2183863b-afce-45cd-bbc4-11f7cb89a206.jpg',
+       '/images/winners/2017-2018/03DCT0232V/248dea6f-74f0-4770-88b8-11f368cf182f_1.jpg',
+       '/images/winners/2017-2018/03DCT0232V/4DM.jpg',
+       '/images/winners/2017-2018/03DCT0232V/accdfcc9-3129-4640-bfac-a9041f20bfe0.jpg',
+       '/images/winners/2017-2018/03DCT0232V/cede1958-f60a-4af1-b50e-c1dbdea94bfc.jpg',
+       '/images/winners/2017-2018/03DCT0232V/DSC_4839.jpg',
+       '/images/winners/2017-2018/03DCT0232V/e39c30fa-0568-4686-8c34-556e84823ff6.jpg',
+       '/images/winners/2017-2018/03DCT0232V/IMG_20161201_094931__1_.jpg',
+       '/images/winners/2017-2018/03DCT0232V/IMG_20161201_095315__1_.jpg',
+       '/images/winners/2017-2018/03DCT0232V/IMG-20180321-WA0059.jpg',
+    ]
+  }, {
+    cct: "15EPR4600T",
+    nombre: "Primaria José Clemente Orozco",
+    estado: "Valle de Chalco Solidaridad, Estado de México",
+    proyecto: "A favor del deporte para una sana convivencia",
+    cat: "Mejora en la convivencia",
+    imgs: [
+       '/images/winners/2017-2018/15EPR4600T/Imagen_1.jpg',
+       '/images/winners/2017-2018/15EPR4600T/Imagen_2.jpg',
+       '/images/winners/2017-2018/15EPR4600T/Imagen_3.jpg',
+       '/images/winners/2017-2018/15EPR4600T/Imagen_4.jpg',
+       '/images/winners/2017-2018/15EPR4600T/Imagen_5.jpg',
+       '/images/winners/2017-2018/15EPR4600T/Imagen_6.jpg',
+    ]
+  }, {
+    cct: "14DST0100K",
+    nombre: "Secundaria Técnica No. 100",
+    estado: "C.D. Guzmán, Jalisco",
+    proyecto: "Domingo Familiar",
+    cat: "Mejora en la convivencia",
+    imgs: [
+       '/images/winners/2017-2018/14DST0100K/14DST0100K10647112_956708304354473_1141172758986113133_n.jpg',
+       '/images/winners/2017-2018/14DST0100K/14DST0100K10953900_956707747687862_3747277220071975074_n.jpg',
+       '/images/winners/2017-2018/14DST0100K/14DST0100K11013299_956708677687769_6758926550616235326_n.jpg',
+       '/images/winners/2017-2018/14DST0100K/14DST0100K11066604_956710441020926_4219238761852573346_n.jpg',
+       '/images/winners/2017-2018/14DST0100K/14DST0100K11068243_956710257687611_6084166628800342875_n.jpg',
+       '/images/winners/2017-2018/14DST0100K/14DST0100K11071550_956710607687576_6031556242330050538_n.jpg',
+       '/images/winners/2017-2018/14DST0100K/14DST0100K14696_956709517687685_1475860521908391161_n.jpg',
+       '/images/winners/2017-2018/14DST0100K/14DST0100K20160417_081707.jpg',
+       '/images/winners/2017-2018/14DST0100K/14DST0100K20160417_081813.jpg',
+       '/images/winners/2017-2018/14DST0100K/14DST0100K20160417_091017.jpg',
+       '/images/winners/2017-2018/14DST0100K/14DST0100KDSC05099.jpg',
+       '/images/winners/2017-2018/14DST0100K/14DST0100KDSC05120.jpg',
+       '/images/winners/2017-2018/14DST0100K/14DST0100KDSC05126.jpg',
+       '/images/winners/2017-2018/14DST0100K/14DST0100KDSC05128.jpg',
+       '/images/winners/2017-2018/14DST0100K/14DST0100KDSC05142.jpg',
+       '/images/winners/2017-2018/14DST0100K/14DST0100KDSC05148.jpg',
+       '/images/winners/2017-2018/14DST0100K/14DST0100KDSC05154.jpg',
+       '/images/winners/2017-2018/14DST0100K/14DST0100KDSC05157.jpg',
+       '/images/winners/2017-2018/14DST0100K/14DST0100KDSC05158.jpg',
+       '/images/winners/2017-2018/14DST0100K/14DST0100KDSC05159.jpg',
+       '/images/winners/2017-2018/14DST0100K/14DST0100KDSC05161.jpg',
+
+    ]
+  }, {
+    cct: "24KPB0093V",
+    nombre: "Primaria Comunitaria Indígena",
+    estado: "Tanlajás, San Luis Potosí",
+    proyecto: "Construyendo valores desde mi identidad",
+    cat: "Mejora en la convivencia ",
+    imgs: [
+       '/images/winners/2017-2018/24KPB0093V/24KPB0093VIMG_20180413_WA0003.jpg',
+       '/images/winners/2017-2018/24KPB0093V/24KPB0093VIMG_20180413_WA0004.jpg',
+       '/images/winners/2017-2018/24KPB0093V/24KPB0093VIMG_20180413_WA0006.jpg',
+       '/images/winners/2017-2018/24KPB0093V/24KPB0093VIMG_20180413_WA0008.jpg',
+       '/images/winners/2017-2018/24KPB0093V/24KPB0093VIMG_20180413_WA0010.jpg',
+       '/images/winners/2017-2018/24KPB0093V/24KPB0093VIMG_20180413_WA0011.jpg',
+       '/images/winners/2017-2018/24KPB0093V/24KPB0093VIMG_20180413_WA0016.jpg',
+       '/images/winners/2017-2018/24KPB0093V/24KPB0093VIMG_20180413_WA0018.jpg',
+       '/images/winners/2017-2018/24KPB0093V/24KPB0093VIMG_20180413_WA0019.jpg',
+       '/images/winners/2017-2018/24KPB0093V/24KPB0093VIMG_20180413_WA0024.jpg',
+       '/images/winners/2017-2018/24KPB0093V/24KPB0093VIMG_20180413_WA0026.jpg',
+       '/images/winners/2017-2018/24KPB0093V/24KPB0093VIMG_20180413_WA0027.jpg',
+       '/images/winners/2017-2018/24KPB0093V/24KPB0093VIMG_20180413_WA0029.jpg',
+       '/images/winners/2017-2018/24KPB0093V/24KPB0093VIMG_20180413_WA0031.jpg',
+       '/images/winners/2017-2018/24KPB0093V/24KPB0093VIMG_20180413_WA0035.jpg',
+       '/images/winners/2017-2018/24KPB0093V/24KPB0093VIMG_20180413_WA0037.jpg',
+       '/images/winners/2017-2018/24KPB0093V/24KPB0093VIMG_20180413_WA0041.jpg',
+       '/images/winners/2017-2018/24KPB0093V/24KPB0093VIMG_20180413_WA0042.jpg',
+    ]
   }
  ]
 });
