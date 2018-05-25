@@ -601,7 +601,7 @@ ul[rn-carousel] {
   height: 535px !important;
 }
 #perfil .load-more{
-  margin-top: 20px;
+  margin: 20px 0;
   display: block;
 }
 #perfil .load-more span{
