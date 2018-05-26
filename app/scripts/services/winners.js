@@ -1781,6 +1781,64 @@ angular.module('caminoAlExitoApp')
        '/images/winners/2017-2018/24KPB0093V/24KPB0093VIMG_20180413_WA0041.jpg',
        '/images/winners/2017-2018/24KPB0093V/24KPB0093VIMG_20180413_WA0042.jpg',
     ]
+  }, {
+    cct: "04DCC0045J",
+    nombre: "Preescolar Indígena Chichen Itzá",
+    estado: "Hopelchén, Campeche",
+    proyecto: "Un lugar para divertirnos",
+    cat: "Mejora en la convivencia ",
+    imgs: [
+       '/images/winners/2017-2018/04DCC0045J/04dCC0045jdiapositiva11.jpg',
+       '/images/winners/2017-2018/04DCC0045J/04dCC0045jdiapositiva13.jpg',
+       '/images/winners/2017-2018/04DCC0045J/04dCC0045jdiapositiva14.jpg',
+       '/images/winners/2017-2018/04DCC0045J/04dCC0045jdiapositiva15.jpg',
+       '/images/winners/2017-2018/04DCC0045J/04dCC0045jdiapositiva19.jpg',
+       '/images/winners/2017-2018/04DCC0045J/04dCC0045jdiapositiva1.jpg',
+       '/images/winners/2017-2018/04DCC0045J/04dCC0045jdiapositiva24.jpg',
+       '/images/winners/2017-2018/04DCC0045J/04dCC0045jdiapositiva26.jpg',
+       '/images/winners/2017-2018/04DCC0045J/04dCC0045jdiapositiva30.jpg',
+       '/images/winners/2017-2018/04DCC0045J/04dCC0045jdiapositiva33.jpg',
+       '/images/winners/2017-2018/04DCC0045J/04dCC0045jdiapositiva37.jpg',
+       '/images/winners/2017-2018/04DCC0045J/04dCC0045jdiapositiva4.jpg',
+       '/images/winners/2017-2018/04DCC0045J/04dCC0045jdiapositiva5.jpg',
+       '/images/winners/2017-2018/04DCC0045J/04dCC0045jdiapositiva9.jpg',
+    ]
+  }, {
+    cct: "12DPR2372F",
+    nombre: "Primaria Vicente Guerrero",
+    estado: "Acapulco, Guerrero",
+    proyecto: "Embelleciendo la escuela con el cuidado del medio ambiente",
+    cat: "Mejora en infraestructura",
+    imgs: [
+       '/images/winners/2017-2018/12DPR2372F/12DPR2372F3589.jpg',
+       '/images/winners/2017-2018/12DPR2372F/12DPR2372F3590.jpg',
+       '/images/winners/2017-2018/12DPR2372F/12DPR2372F3591.jpg',
+       '/images/winners/2017-2018/12DPR2372F/12DPR2372F3592.jpg',
+       '/images/winners/2017-2018/12DPR2372F/12DPR2372F3593.jpg',
+       '/images/winners/2017-2018/12DPR2372F/12DPR2372F3595.jpeg',
+       '/images/winners/2017-2018/12DPR2372F/12DPR2372F3595.jpg',
+       '/images/winners/2017-2018/12DPR2372F/Copia_de_12DPR2372F3593.jpg',
+
+    ]
+  }, {
+    cct: "15EPR0613W",
+    nombre: "Primaria Lic. Juan Fernández Albarrán",
+    estado: "Tlalnepantla, Estado de México",
+    proyecto: "Moviendo corazones por nuestra escuela",
+    cat: "Reconstrucción tras sismos ",
+    imgs: [
+       '/images/winners/2017-2018/15EPR0613W/15EPR0613XWhatsApp_Image_2018-04-22_at_22.53.48.jpg',
+       '/images/winners/2017-2018/15EPR0613W/15EPR0613XWhatsApp_Image_2018-04-22_at_22.54.46.jpg',
+       '/images/winners/2017-2018/15EPR0613W/15EPR0613XWhatsApp_Image_2018-04-22_at_23.23.11.jpg',
+       '/images/winners/2017-2018/15EPR0613W/15EPR0613XWhatsApp_Image_2018-04-22_at_23.23.42.jpg',
+       '/images/winners/2017-2018/15EPR0613W/15EPR0613XWhatsApp_Image_2018-04-22_at_23.24.14.jpg',
+       '/images/winners/2017-2018/15EPR0613W/15EPR0613XWhatsApp_Image_2018-04-22_at_23.25.39.jpg',
+       '/images/winners/2017-2018/15EPR0613W/15EPR0613XWhatsApp_Image_2018-04-22_at_23.25.50.jpg',
+       '/images/winners/2017-2018/15EPR0613W/15EPR0613XWhatsApp_Image_2018-04-22_at_23.25.59.jpg',
+       '/images/winners/2017-2018/15EPR0613W/15EPR0613XWhatsApp_Image_2018-04-22_at_23.26.41.jpg',
+       '/images/winners/2017-2018/15EPR0613W/15EPR0613XWhatsApp_Image_2018-04-22_at_23.39.03.jpg',
+       '/images/winners/2017-2018/15EPR0613W/15EPR0613XWhatsApp_Image_2018-04-22_at_23.39.04__1_.jpg',
+    ]
   }
  ]
 });
