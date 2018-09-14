@@ -8,9 +8,10 @@
  * Controller of the caminoAlExitoApp
  */
 angular.module('caminoAlExitoApp')
-  .controller('GanadorasCtrl', function ($scope, $routeParams) {
+  .controller('GanadorasCtrl', function ($scope, $routeParams, winners) {
     $scope.date = $routeParams.periodo;
 
+    $scope.winners = winners;
     $scope.schools = [
       [
         {cct: '14EPR0451B', name: 'Escuela Primaria Francisco Márquez', geo: 'Guadalajara, Jalisco', img: '/images/fichas2/1.png'},

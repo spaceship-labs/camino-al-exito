@@ -1646,6 +1646,8 @@ angular.module('caminoAlExitoApp')
     "cct": "30EBH0383C",
     "nombre": "Bachillerato Gral. Francisco J. Mugica",
     "ganadora": true,
+    "lat": 19.150813,
+    "lng": -96.972287,
     "proyecto": "Mejorando nuestra escuela",
     "nivel": "Bachillerato",
     "estado": "Huatusco, Veracruz",
@@ -1669,6 +1671,8 @@ angular.module('caminoAlExitoApp')
     nombre: "Preescolar Sakpakal",
     estado: "Hopelchén, Campeche",
     proyecto: "Las ruiseñoras embajadoras de la lengua maya",
+    lat: 19.4425,
+    lng: -89.534722,
     imgs: [
       '/images/winners/2017-2018/04DIN0014Q/Imagen_10.jpg',
       '/images/winners/2017-2018/04DIN0014Q/Imagen_11.jpg',
@@ -1685,6 +1689,8 @@ angular.module('caminoAlExitoApp')
     nombre: "Primaria Ford No. 92",
     estado: "Tampico, Tamaulipas",
     proyecto: "Ayuda a reciclar y el mundo te hará brillar",
+    lat: 22.279331,
+    lng: -97.865722,
     imgs: [
        '/images/winners/2017-2018/28DPR1452L/28DPR1452LdiseYAa721.jpg',
        '/images/winners/2017-2018/28DPR1452L/28DPR1452LDiseYAa7.jpg',
@@ -1697,6 +1703,8 @@ angular.module('caminoAlExitoApp')
     nombre: "CBTIS 62 General Agustín Olachea Avilés",
     estado: "La Paz, Baja California Sur",
     proyecto: "Conviviendo y mejorando nuestro comunidad escolar",
+    lat: 24.135316,
+    lng: -110.317262,
     cat: "Mejora en la convivencia",
     imgs: [
        '/images/winners/2017-2018/03DCT0232V/1.jpg',
@@ -1716,6 +1724,8 @@ angular.module('caminoAlExitoApp')
     nombre: "Primaria José Clemente Orozco",
     estado: "Valle de Chalco Solidaridad, Estado de México",
     proyecto: "A favor del deporte para una sana convivencia",
+    lat: 19.304766,
+    lng: -98.935121,
     cat: "Mejora en la convivencia",
     imgs: [
        '/images/winners/2017-2018/15EPR4600T/Imagen_1.jpg',
@@ -1730,6 +1740,8 @@ angular.module('caminoAlExitoApp')
     nombre: "Secundaria Técnica No. 100",
     estado: "C.D. Guzmán, Jalisco",
     proyecto: "Domingo Familiar",
+    lat: 19.725623,
+    lng: -103.455833,
     cat: "Mejora en la convivencia",
     imgs: [
        '/images/winners/2017-2018/14DST0100K/14DST0100K10647112_956708304354473_1141172758986113133_n.jpg',
@@ -1760,6 +1772,8 @@ angular.module('caminoAlExitoApp')
     nombre: "Primaria Comunitaria Indígena",
     estado: "Tanlajás, San Luis Potosí",
     proyecto: "Construyendo valores desde mi identidad",
+    lat: 21.650278,
+    lng: -98.918889,
     cat: "Mejora en la convivencia ",
     imgs: [
        '/images/winners/2017-2018/24KPB0093V/24KPB0093VIMG_20180413_WA0003.jpg',
@@ -1786,6 +1800,8 @@ angular.module('caminoAlExitoApp')
     nombre: "Preescolar Indígena Chichen Itzá",
     estado: "Hopelchén, Campeche",
     proyecto: "Un lugar para divertirnos",
+    lat: 19.2425,
+    lng: -89.334722,
     cat: "Mejora en la convivencia ",
     imgs: [
        '/images/winners/2017-2018/04DCC0045J/04dCC0045jdiapositiva11.jpg',
@@ -1808,6 +1824,8 @@ angular.module('caminoAlExitoApp')
     nombre: "Primaria Vicente Guerrero",
     estado: "Acapulco, Guerrero",
     proyecto: "Embelleciendo la escuela con el cuidado del medio ambiente",
+    lat: 17.830253,
+    lng: -99.780044,
     cat: "Mejora en infraestructura",
     imgs: [
        '/images/winners/2017-2018/12DPR2372F/12DPR2372F3589.jpg',
@@ -1825,6 +1843,8 @@ angular.module('caminoAlExitoApp')
     nombre: "Primaria Lic. Juan Fernández Albarrán",
     estado: "Tlalnepantla, Estado de México",
     proyecto: "Moviendo corazones por nuestra escuela",
+    lat: 19.553025,
+    lng: -99.218665,
     cat: "Reconstrucción tras sismos ",
     imgs: [
        '/images/winners/2017-2018/15EPR0613W/15EPR0613XWhatsApp_Image_2018-04-22_at_22.53.48.jpg',

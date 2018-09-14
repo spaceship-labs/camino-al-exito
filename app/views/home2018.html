@@ -1,0 +1,127 @@
+<ng-include src="'views/header2018.html'"></ng-include>
+<div id="home" class="h2018">
+  <h3>¿Qué hay que hacer?</h3>
+  <div class="steps" layout="column" layout-align="center center" layout-fill layout-gt-md="row">
+
+    <div class="step" layout="column" layout-align="start center">
+      <img src="images/trabajando.png" alt="">
+      <p>Trabajar activamente
+      <br>
+      junto a otros padres en la
+      <br>
+      mejora de la educación  de tus
+      <br>
+      hijos</p>
+    </div>
+    <span class="angle-icon" layout="column" layout-align="start center">
+      <i hide show-gt-md class="fa fa-angle-right fa-5x" aria-hidden="true"></i>
+      <i hide-gt-md class="fa fa-angle-down fa-5x" aria-hidden="true"></i>
+    </span>
+
+
+    <div class="step"  layout="column" layout-align="start center">
+      <img src="images/bases.png" alt="">
+      <p>Conoce las bases de la
+      <br>
+      convocatoria</p>
+    </div>
+    <span class="angle-icon" layout="column" layout-align="start center">
+      <i hide show-gt-md class="fa fa-angle-right fa-5x" aria-hidden="true"></i>
+      <i hide-gt-md class="fa fa-angle-down fa-5x" aria-hidden="true"></i>
+    </span>
+
+    <div class="step" layout="column" layout-align="start center">
+      <img src="images/registra.png" alt="">
+      <p>Registra en línea el proyecto</p>
+    </div>
+    <span class="angle-icon" layout="column" layout-align="start center">
+      <i hide show-gt-md class="fa fa-angle-right fa-5x" aria-hidden="true"></i>
+      <i hide-gt-md class="fa fa-angle-down fa-5x" aria-hidden="true"></i>
+    </span>
+
+    <div class="step" layout="column" layout-align="start center">
+      <img src="images/fotos.png" alt="">
+      <p>Envía fotos, videos y
+      <br>
+      documentos del proyecto</p>
+    </div>
+  </div>
+  <!--
+  <div class="orange lk" layout-padding>
+    <div class="links" layout="row" layout-align="center center" layout-wrap>
+      <div layout="column" layout-align="start center">
+        <img src="images/bases.png" alt="">
+        <a target="_blank" href="/BasesConvocatoria_PapasYMamasEnEducAccion_2018.pdf">BASES DE LA CONVOCATORIA</a>
+      </div>
+      <div layout="column" layout-align="center center">
+        <img src="images/registra.png" alt="">
+        <a ng-click="ga()" href="http://registro-educaccion.mejoratuescuela.org/">REGISTRA TU PROYECTO</a>
+      </div>
+    </div>
+  </div>
+  -->
+  <div class="orange">
+    <h3 class="thanks">Conoce la lista de escuelas ganadoras en ediciones pasadas.</h3>
+    <!--
+    <p class="show-schools">Conoce la lista de escuelas ganadoras</p>
+    -->
+    <div layout="row" layout-sm="column" layout-align="center center">
+      <div flex="25">
+        <p class="win-school latest">
+          <a href="#!/ganadoras?periodo=2016-2017">Ganadores 2016-2017</a>
+        </p>
+      </div>
+      <div flex="25">
+        <p class="win-school">
+          <a href="#!/ganadoras?periodo=2015-2016">Ganadores 2015-2016</a>
+        </p>
+      </div>
+      <div flex="25">
+        <p class="win-school win2017-18">
+          <a href="#!/ganadoras?periodo=2017-2018">Ganadores 2017-2018</a>
+        </p>
+      </div>
+    </div>
+    <!--
+    <div class="links" layout="row" layout-align="center center">
+      <a target="_blank" href="http://05d2b6dc746bc95f8eae-ee795f94e3237cba6784ea0eca51d07d.r53.cf1.rackcdn.com/BasesConvocatoria_PapasYMamasEnEducAccion.pdf">BASES DE LA CONVOCATORIA</a>
+      <a href="https://goo.gl/forms/0TZwpMTGe0XP8dcX2">REGISTRA TU PROYECTO EN LÍNEA</a>
+    </div>
+    <p>Una vez terminado el registro, envíanos las evidencias
+    <br>
+    (fotos, videos y documentos) al correo:
+    <br>
+    <span>educaccion@mejoratuescuela.org</span></p>
+    -->
+
+  </div>
+
+  <div class="cups" layout="column" layout-gt-md="row">
+    <leaflet lf-center="center" markers="markers" defaults="options" id="map"  height="480px" width="640px" flex="100"></leaflet>
+  </div>
+
+  <div class="info">
+    <p class="title">¡Más de 600 escuelas participantes
+    <br>
+    y 10 ganadores cada año!</p>
+
+    <div class="steps" layout="column" layout-align="center center"  layout-gt-md="row">
+      <div class="step" layout="column" layout-align="start center">
+        <img src="images/mejoracademica.png" alt="">
+        <p>Mejora académica</p>
+      </div>
+      <div class="step" layout="column" layout-align="start center">
+        <img src="images/infraes.png" alt="">
+        <p>Mejora en la infraestructura</p>
+      </div>
+      <div class="step" layout="column" layout-align="start center">
+        <img src="images/convivencia.png" alt="">
+        <p>Convivencia escolar</p>
+      </div>
+      <div class="step" layout="column" layout-align="start center">
+        <img src="images/reconstruccion.png" alt="">
+        <p>Reconstrucción tras sismo</p>
+      </div>
+    </div>
+  </div>
+</div>

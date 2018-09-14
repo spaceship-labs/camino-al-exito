@@ -28,12 +28,15 @@ angular.module('caminoAlExitoApp')
       var exists = {};
       return [exists, function(cct) {
         cct.message = cct.nombre;
-        exists[cct.entidad] = true;
+        //exists[cct.entidad] = true;
         cct.icon ={
           iconSize:[30, 45],
         };
         if (cct.p === '2015-2016') {
           cct.icon.iconUrl = '/images/2015-2016.png';
+        } else if (cct.p === '2017-2018') {
+          cct.icon.iconUrl = '/images/2017-2018.png';
+          cct.message = '<a href="#!/escuela/'+cct.cct+'?periodo=2017-2018">'+cct.message+'</a>';
         } else {
           cct.icon.iconUrl = '/images/2016-2017.png';
           cct.message = '<a href="#!/escuela/'+cct.cct+'">'+cct.message+'</a>';
@@ -55,12 +58,17 @@ angular.module('caminoAlExitoApp')
       //var exists = process[0];
       var p1516 = data['2015-2016'].map(setP('2015-2016'));
       var p1617 = data['2016-2017'].map(setP('2016-2017'));
+      var p1718 = data['2017-2018'].map(setP('2017-2018'));
+      console.log(p1718.length);
 
       p1516 = p1516.filter(function(cct) {
         return cct.ganadora;
       });
+
       var markers = p1516.map(process[1]);
-      markers = markers.concat(p1617.map(process[1]));
+      markers = markers
+                .concat(p1617.map(process[1]))
+                .concat(p1718.map(process[1]));
 
       $scope.ccts = markers;
 

@@ -411,9 +411,10 @@ h3.thanks{font-size: 30px;text-align: center; color: white; font-weight: bold; p
 #home .steps .fa-angle-right{}
 #home .angle-icon i{font-size: 8em;color: #2873B7;}
 
- .win-school a{color: white; text-align: center; font-size: 17px;}
- .win-school{background: #6598C8; padding: 10px !important; margin: 15px;}
- .win-school.latest{background: #2170BD}
+.win-school a{color: white; text-align: center; font-size: 17px;}
+.win-school{background: #6598C8; padding: 10px !important; margin: 15px;}
+.win-school.latest{background: #2170BD}
+.win-school.win2017-18{background: #7EC065;}
 
 #home .orange.lk{background: rgba(32, 125, 216, .9); padding-top: 40px;}
 .orange{background-color: #F6921A;}
@@ -755,4 +756,25 @@ ul[rn-carousel] {
 
 .fixed-video-spacing{
   margin: 15px auto;
+}
+
+/*home2018*/
+#header.h2018{
+  padding-bottom: 125px;
+}
+#header img.force-icon{
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+#header .cm-button-white{
+  background-color: white;
+  color: #3677B9;
+  font-weight: bold;
+  text-transform: none;
+}
+
+#home.h2018 .thanks{
+  color: white;
 }
