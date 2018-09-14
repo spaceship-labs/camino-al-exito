@@ -763,9 +763,13 @@ ul[rn-carousel] {
   padding-bottom: 140px;
 }
 #header img.force-icon{
-  width: 100px;
-  height: 100px;
-  margin: 0 auto;
+  width: 75px;
+  height: 75px;
+  margin: 8px auto;
+}
+
+#header .header-links{
+  padding-top: 25px;
 }
 
 #header .cm-button-white{
