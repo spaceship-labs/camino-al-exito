@@ -26,9 +26,9 @@ angular
     //$locationProvider.html5Mode(true);
 
     $routeProvider
-      .when('/back', {
+      .when('/', {
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
+        controller: 'Home2017Ctrl',
         controllerAs: 'main'
       })
       .when('/home-back', {//home2016
@@ -42,7 +42,7 @@ angular
         controller: 'GanadorasCtrl',
         controllerAs: 'ganadoras'
       })
-      .when('/', {
+      .when('/home2017', {
         templateUrl: 'views/home2017.html',
         controller: 'Home2017Ctrl',
         controllerAs: 'home2017'

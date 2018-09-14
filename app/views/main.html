@@ -44,7 +44,7 @@
       href="http://registro-educaccion.mejoratuescuela.org/"
       layout="row"
       layout-align="center center"
-      flex="60"
+      flex="100"
       flex-sm="100"
       flex-xs="100"
     >
@@ -60,6 +60,7 @@
         -->
       </span>
     </a>
+    <!--
     <div
       class="winner-link regiter-item"
       href="#/ganadoras"
@@ -75,8 +76,36 @@
         <a class="winners-link" href="#!/ganadoras?periodo=2016-2017">2016-2017</a>
       </h2>
     </div>
+    -->
   </div>
+
+  <div class="orange">
+    <h3 class="thanks">Conoce la lista de escuelas ganadoras en ediciones pasadas.</h3>
+    <!--
+    <p class="show-schools">Conoce la lista de escuelas ganadoras</p>
+    -->
+    <div layout="row" layout-sm="column" layout-align="center center">
+      <div flex="25">
+        <p class="win-school latest">
+          <a href="#!/ganadoras?periodo=2016-2017">Ganadores 2016-2017</a>
+        </p>
+      </div>
+      <div flex="25">
+        <p class="win-school">
+          <a href="#!/ganadoras?periodo=2015-2016">Ganadores 2015-2016</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+
+
 </div>
+
+  <div class="cups" layout="column" layout-gt-md="row">
+    <leaflet lf-center="center" markers="markers" defaults="options" id="map"  height="480px" width="640px" flex="100"></leaflet>
+  </div>
 <div class="container inputs">
   <div class="dump-content" ng-show="userLogin.email">
 
@@ -101,6 +130,7 @@
 
 
   </div>
+
 
   <form ng-if='!saved &amp;&amp; !saving &amp;&amp; showForm' ng-submit="save(selectedSchool)" ng-show="userLogin.email">
     <md-card layout-padding layout-wrap layout='row'>
