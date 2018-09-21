@@ -772,6 +772,10 @@ ul[rn-carousel] {
   padding-top: 25px;
 }
 
+#header .cm-button-white:hover{
+  background-color: #096cbc;
+  color: white;
+}
 #header .cm-button-white{
   background-color: white;
   color: #3677B9;
