@@ -787,43 +787,27 @@ ul[rn-carousel] {
   color: white;
 }
 
-#popup-extend{
-  margin: 0 auto;
-  display: block;
-  width: 80%;
-  height: 90%;
-  position: relative;
-  max-width: 680px;
-  max-height: 621px;
-}
-
-#popup-extend img{
+.poup-img{
   width: 100%;
   height: 100%;
 }
 
-#popup-extend .close-dialog-btn{
-  position: absolute;
-  top: 0;
-  right: 19px;
-  font-size: 22px;
-  color: black;
-}
-
-@media (max-width: 500px) {
-
-  #header #popup-extend{
-    width: 60%;
-    height: 70%;
-  }
-
-  #header #popup-extend .close-dialog-btn{
-    right: 5px;
-    top: -5px;
-  }
-}
-
-body.stop-scrolling{
-  height: 100%;
+.popup-extend{
   overflow: hidden;
+}
+
+.popup-extend .close-border{
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: white;
+  width: 50px;
+  height: 50px;
+}
+
+.popup-extend .close-border a{
+    font-size: 25px;
+    text-align: center;
+    display: block;
+    color: black;
 }

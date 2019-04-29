@@ -8,7 +8,7 @@
  * Controller of the caminoAlExitoApp
  */
 angular.module('caminoAlExitoApp')
-  .controller('Home2017Ctrl', function ($scope, $http, winners,  $mdDialog) {
+  .controller('Home2017Ctrl', function ($scope, $http, winners,  $mdDialog, $timeout) {
     console.log('winners', winners);
     $scope.center = {
         zoom:12
@@ -17,13 +17,31 @@ angular.module('caminoAlExitoApp')
 
     };
 
-    var body = angular.element(document.body);
-    body.addClass('stop-scrolling');
-    $scope.close = function(e) {
-      e.preventDefault();
-      body.removeClass('stop-scrolling');
-      $scope.closeModal = true;
-    };
+    $timeout(function() {
+
+      $scope.close = function($event) {
+        $event.preventDefault();
+        $mdDialog.hide(mdD);
+      };
+
+      var parentEl = angular.element(document.body);
+      var mdD = $mdDialog.show({
+        parent: parentEl,
+        clickOutsideToClose: true,
+        templateUrl:  'views/popup-extend.html',
+        preserveScope: true,
+        scope: $scope,
+      });
+
+    }, 300);
+
+    // var body = angular.element(document.body);
+    // body.addClass('stop-scrolling');
+    // $scope.close = function(e) {
+    //   e.preventDefault();
+    //   body.removeClass('stop-scrolling');
+    //   $scope.closeModal = true;
+    // };
 
     $scope.options = {
       scrollWheelZoom: false
