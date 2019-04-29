@@ -8,13 +8,21 @@
  * Controller of the caminoAlExitoApp
  */
 angular.module('caminoAlExitoApp')
-  .controller('Home2017Ctrl', function ($scope, $http, winners) {
+  .controller('Home2017Ctrl', function ($scope, $http, winners,  $mdDialog) {
     console.log('winners', winners);
     $scope.center = {
         zoom:12
     };
     $scope.layers = {
 
+    };
+
+    var body = angular.element(document.body);
+    body.addClass('stop-scrolling');
+    $scope.close = function(e) {
+      e.preventDefault();
+      body.removeClass('stop-scrolling');
+      $scope.closeModal = true;
     };
 
     $scope.options = {

@@ -786,3 +786,44 @@ ul[rn-carousel] {
 #home.h2018 .thanks{
   color: white;
 }
+
+#popup-extend{
+  margin: 0 auto;
+  display: block;
+  width: 80%;
+  height: 90%;
+  position: relative;
+  max-width: 680px;
+  max-height: 621px;
+}
+
+#popup-extend img{
+  width: 100%;
+  height: 100%;
+}
+
+#popup-extend .close-dialog-btn{
+  position: absolute;
+  top: 0;
+  right: 19px;
+  font-size: 22px;
+  color: black;
+}
+
+@media (max-width: 500px) {
+
+  #header #popup-extend{
+    width: 60%;
+    height: 70%;
+  }
+
+  #header #popup-extend .close-dialog-btn{
+    right: 5px;
+    top: -5px;
+  }
+}
+
+body.stop-scrolling{
+  height: 100%;
+  overflow: hidden;
+}
