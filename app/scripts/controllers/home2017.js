@@ -17,31 +17,23 @@ angular.module('caminoAlExitoApp')
 
     };
 
-    $timeout(function() {
+    // $timeout(function() {
 
-      $scope.close = function($event) {
-        $event.preventDefault();
-        $mdDialog.hide(mdD);
-      };
+    //   $scope.close = function($event) {
+    //     $event.preventDefault();
+    //     $mdDialog.hide(mdD);
+    //   };
 
-      var parentEl = angular.element(document.body);
-      var mdD = $mdDialog.show({
-        parent: parentEl,
-        clickOutsideToClose: true,
-        templateUrl:  'views/popup-extend.html',
-        preserveScope: true,
-        scope: $scope,
-      });
+    //   var parentEl = angular.element(document.body);
+    //   var mdD = $mdDialog.show({
+    //     parent: parentEl,
+    //     clickOutsideToClose: true,
+    //     templateUrl:  'views/popup-extend.html',
+    //     preserveScope: true,
+    //     scope: $scope,
+    //   });
 
-    }, 300);
-
-    // var body = angular.element(document.body);
-    // body.addClass('stop-scrolling');
-    // $scope.close = function(e) {
-    //   e.preventDefault();
-    //   body.removeClass('stop-scrolling');
-    //   $scope.closeModal = true;
-    // };
+    // }, 300);
 
     $scope.options = {
       scrollWheelZoom: false
