@@ -9,7 +9,7 @@
  */
 angular.module('caminoAlExitoApp')
   .controller('Home2017Ctrl', function ($scope, $http, winners,  $mdDialog, $timeout) {
-    console.log('winners', winners);
+    $scope.winners = winners;
     $scope.center = {
         zoom:12
     };

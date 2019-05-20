@@ -1,5 +1,6 @@
 <ng-include src="'views/header2018.html'"></ng-include>
 <div id="home" class="h2018">
+  <!--
   <h3>¿Qué hay que hacer?</h3>
   <div class="steps" layout="column" layout-align="center center" layout-fill layout-gt-md="row">
 
@@ -46,6 +47,7 @@
       documentos del proyecto</p>
     </div>
   </div>
+  -->
   <!--
   <div class="orange lk" layout-padding>
     <div class="links" layout="row" layout-align="center center" layout-wrap>
@@ -60,25 +62,50 @@
     </div>
   </div>
   -->
-  <div class="orange">
-    <h3 class="thanks">Conoce la lista de escuelas ganadoras en ediciones pasadas.</h3>
+  <div class="know">
+    <div layout="row" layout-align="center center">
+      <img flex="100" src="images/win19.png" alt="">
+    </div>
+  </div>
+  <div class="header-content">
+    <div layout="row" layout-align="center center" class="list-win">
+      <div flex="100" layout="row" layout-wrap layout-align="space-around start" layout-fill ng-cloak>
+        <span layout-sm="column" flex-sm="100" layout-align="center center" flex="40" class="win" ng-repeat="win in winners['2018-2019']" layout="row">
+          <p class="name">
+            {{win.nombre}}            <br>
+            <span class="info">{{win.cct}}, {{win.estado}}</span>
+          </p>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="white">
     <!--
     <p class="show-schools">Conoce la lista de escuelas ganadoras</p>
     -->
-    <div layout="row" layout-sm="column" layout-align="center center">
+    <div layout="row" layout-sm="column" layout-align="center center" class="winners-label">
       <div flex="25" flex-sm="100">
-        <p class="win-school win2017-18">
-          <a href="#!/ganadoras?periodo=2017-2018">Ganadores 2017-2018</a>
+        <p class="y16">
+          <a href="#!/ganadoras?periodo=2015-2016">
+            <span class="circle"></span>
+            <span class="year">2015-2016</span>
+          </a>
         </p>
       </div>
       <div flex="25" flex-sm="100">
-        <p class="win-school latest">
-          <a href="#!/ganadoras?periodo=2016-2017">Ganadores 2016-2017</a>
+        <p class="latest y17">
+          <a href="#!/ganadoras?periodo=2016-2017">
+            <span class="circle"></span>
+            <span class="year">2016-2017</span>
+          </a>
         </p>
       </div>
       <div flex="25" flex-sm="100">
-        <p class="win-school">
-          <a href="#!/ganadoras?periodo=2015-2016">Ganadores 2015-2016</a>
+        <p class="win2017-18 y18">
+          <a href="#!/ganadoras?periodo=2017-2018">
+            <span class="circle"></span>
+            <span class="year">2017-2018</span>
+          </a>
         </p>
       </div>
     </div>

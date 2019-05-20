@@ -811,3 +811,46 @@ ul[rn-carousel] {
     display: block;
     color: black;
 }
+
+#home.h2018 .header-content .win{
+  border-radius: 43px;
+}
+
+#home.h2018 .header-content .win:hover{
+  background-color: #F59139;
+}
+
+#home .winners-label{
+  padding: 15px 0;
+}
+
+#home .winners-label p{
+  text-align: center;
+}
+
+#home .winners-label .circle{
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+#home .winners-label .year{
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 10px;
+  font-weight: bold;
+  color: #1DB1EB;
+}
+
+#home .winners-label .y18 .circle{
+  background: #6899C4;
+}
+
+#home .winners-label .y17 .circle{
+  background: #2771BA;
+}
+
+#home .winners-label .y16 .circle{
+  background: #2B8B61;
+}
