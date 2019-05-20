@@ -821,7 +821,7 @@ ul[rn-carousel] {
 }
 
 #home .winners-label{
-  padding: 15px 0;
+  padding: 90px 0 15px;
 }
 
 #home .winners-label p{
@@ -844,17 +844,26 @@ ul[rn-carousel] {
 }
 
 #home .winners-label .y18 .circle{
-  background: #6899C4;
+  background: #ECCC4D;
 }
 
 #home .winners-label .y17 .circle{
-  background: #2771BA;
+  background: #2771B8;
 }
 
 #home .winners-label .y16 .circle{
-  background: #2B8B61;
+  background: #6498C4;
 }
 
 #home .win19 {
   height: 320px;
+  max-width: 1155px;
+  display: block;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 566px) {
+  #home .win19 {
+    height: 230px !important;
+  }
 }
