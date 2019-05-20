@@ -760,7 +760,8 @@ ul[rn-carousel] {
 
 /*home2018*/
 #header.h2018{
-  padding-bottom: 140px;
+  padding-bottom: 60px;
+  background-position-y: -75px;
 }
 #header img.force-icon{
   width: 113px;
@@ -856,7 +857,6 @@ ul[rn-carousel] {
 }
 
 #home .win19 {
-  height: 320px;
   max-width: 1155px;
   display: block;
   overflow: hidden;
