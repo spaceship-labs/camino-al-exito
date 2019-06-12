@@ -844,6 +844,10 @@ ul[rn-carousel] {
   color: #1DB1EB;
 }
 
+#home .winners-label .y19 .circle{
+  background: #F1A610;
+}
+
 #home .winners-label .y18 .circle{
   background: #ECCC4D;
 }

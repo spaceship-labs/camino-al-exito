@@ -46,7 +46,7 @@
   </div>
   <div class="main-content container">
     <div ng-include="'views/escuela_video.html'"  ng-if="sc.yt && date==='2016-2017'"></div>
-    <div ng-include="'views/escuela_carousel.html'" ng-if="date==='2017-2018'"></div>
+    <div ng-include="'views/escuela_carousel.html'" ng-if="date==='2017-2018' || date==='2018-2019'"></div>
 
     <div class="main-content-text" btf-markdown ng-include="'views/winners/' + pathFiles + sc.cct +'.html'">
     </div>

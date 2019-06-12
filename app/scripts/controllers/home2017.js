@@ -52,12 +52,12 @@ angular.module('caminoAlExitoApp')
         };
         if (cct.p === '2015-2016') {
           cct.icon.iconUrl = '/images/2015-2016.png';
-        } else if (cct.p === '2017-2018') {
-          cct.icon.iconUrl = '/images/2017-2018.png';
-          cct.message = '<a href="#!/escuela/'+cct.cct+'?periodo=2017-2018">'+cct.message+'</a>';
-        } else {
+        } else if (cct.p === '2016-2017') {
           cct.icon.iconUrl = '/images/2016-2017.png';
           cct.message = '<a href="#!/escuela/'+cct.cct+'">'+cct.message+'</a>';
+        } else {
+          cct.icon.iconUrl = '/images/'+cct.p+'.png';
+          cct.message = '<a href="#!/escuela/'+cct.cct+'?periodo='+cct.p+'">'+cct.message+'</a>';
         }
         return cct;
       }];
@@ -77,7 +77,8 @@ angular.module('caminoAlExitoApp')
       var p1516 = data['2015-2016'].map(setP('2015-2016'));
       var p1617 = data['2016-2017'].map(setP('2016-2017'));
       var p1718 = data['2017-2018'].map(setP('2017-2018'));
-      console.log(p1718.length);
+      var p1719 = data['2018-2019'].map(setP('2018-2019'));
+      console.log(p1719.length);
 
       p1516 = p1516.filter(function(cct) {
         return cct.ganadora;
@@ -86,7 +87,8 @@ angular.module('caminoAlExitoApp')
       var markers = p1516.map(process[1]);
       markers = markers
                 .concat(p1617.map(process[1]))
-                .concat(p1718.map(process[1]));
+                .concat(p1718.map(process[1]))
+                .concat(p1719.map(process[1]));
 
       $scope.ccts = markers;
 
