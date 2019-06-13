@@ -44,6 +44,10 @@ angular.module('caminoAlExitoApp')
 
     function processMarkers() {
       var exists = {};
+      var icons = {
+        '2017-2018': '/images/2017-2018.png',
+        '2018-2019': '/images/2018-2019.png'
+      };
       return [exists, function(cct) {
         cct.message = cct.nombre;
         //exists[cct.entidad] = true;
@@ -56,7 +60,7 @@ angular.module('caminoAlExitoApp')
           cct.icon.iconUrl = '/images/2016-2017.png';
           cct.message = '<a href="#!/escuela/'+cct.cct+'">'+cct.message+'</a>';
         } else {
-          cct.icon.iconUrl = '/images/'+cct.p+'.png';
+          cct.icon.iconUrl = icons[cct.p];
           cct.message = '<a href="#!/escuela/'+cct.cct+'?periodo='+cct.p+'">'+cct.message+'</a>';
         }
         return cct;
