@@ -54,14 +54,16 @@ angular.module('caminoAlExitoApp')
         cct.icon ={
           iconSize:[30, 45],
         };
+        var cctLink = 'http://www.mejoratuescuela.org/escuelas/index/'+cct.cct;
+        cct.message = '<a href="'+cctLink+'" target="_blank">'+cct.message+'</a>';
         if (cct.p === '2015-2016') {
           cct.icon.iconUrl = '/images/2015-2016.png';
         } else if (cct.p === '2016-2017') {
           cct.icon.iconUrl = '/images/2016-2017.png';
-          cct.message = '<a href="#!/escuela/'+cct.cct+'">'+cct.message+'</a>';
+          // cct.message = '<a href="#!/escuela/'+cct.cct+'">'+cct.message+'</a>';
         } else {
           cct.icon.iconUrl = icons[cct.p];
-          cct.message = '<a href="#!/escuela/'+cct.cct+'?periodo='+cct.p+'">'+cct.message+'</a>';
+          // cct.message = '<a href="#!/escuela/'+cct.cct+'?periodo='+cct.p+'">'+cct.message+'</a>';
         }
         return cct;
       }];

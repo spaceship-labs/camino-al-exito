@@ -417,7 +417,7 @@ h3.thanks{font-size: 30px;text-align: center; color: white; font-weight: bold; p
 .win-school.win2017-18{background: #EBCC4D;}
 
 #home .orange.lk{background: rgba(32, 125, 216, .9); padding-top: 40px;}
-.orange{background-color: #F3913D;}
+.orange{background-color: #F3913D; margin-top: 50px;}
 #home .links a{color: white; font-weight: bold; border: 2px solid white; margin: 10px 10px 40px; padding: 7px 0; width: 437px; font-size: 19px; text-align: center;}
 .orange p{text-align: center; font-size: 17px; font-weight: bold; color: white; padding: 0 0 41px;}
 .orange p span{font-weight: 100;}
@@ -817,9 +817,7 @@ ul[rn-carousel] {
   border-radius: 43px;
 }
 
-#home.h2018 .header-content .win:hover{
-  background-color: #F59139;
-}
+
 
 #home .winners-label{
   padding: 90px 0 15px;
@@ -844,20 +842,28 @@ ul[rn-carousel] {
   color: #1DB1EB;
 }
 
-#home .winners-label .y19 .circle{
+#home .y19{
   background: #F1A610;
 }
 
-#home .winners-label .y18 .circle{
+#home .y18{
   background: #ECCC4D;
 }
 
-#home .winners-label .y17 .circle{
+#home .y17{
   background: #2771B8;
 }
 
-#home .winners-label .y16 .circle{
+#home .y16{
   background: #6498C4;
+}
+
+#home .win-school.right a:hover{
+  color: #2771B8;
+}
+
+#home .win-school.left a:hover{
+  color: #ECCC4D;
 }
 
 #home .win19 {
